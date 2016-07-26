@@ -14,6 +14,8 @@
 -- :q
 --
 -- $ ./process < raw > README.md
+--
+-- $ pandoc -t html5 -s --self-contained --css=../stylesheet-forreaders/stylesheet-forreaders.css < README.md > README.html
 
 import Text.Parsec
 import Data.Char
@@ -36,9 +38,9 @@ f x = either show id $ do
         [
         ]
 
-mkLine (kybd, uncd, uncdn) = "| " ++ kybd ++ " | " ++ uncd ++ " | " ++ uncdn ++ " |"
+mkLine (kybd, uncd, uncdn) = "| " ++ kybd ++ " | " ++ uncd ++ " | " ++ show uncdn ++ " |"
 
-psDigraph :: Parsec String () (String, String, String)
+psDigraph :: Parsec String () (String, String, Int)
 psDigraph = do
     kybd <- count 2 anyChar
     string " "
@@ -46,7 +48,7 @@ psDigraph = do
     uncd1 <- option "" $ Text.Parsec.many $ satisfy (not . isSpace)
     spaces
     uncdn <- many1 $ satisfy isDigit
-    return (kybd, uncd0 ++ uncd1, uncdn)
+    return (kybd, uncd0 ++ uncd1, read uncdn)
 
 p = do
     spaces

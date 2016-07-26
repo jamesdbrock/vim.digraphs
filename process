@@ -1,0 +1,77 @@
+#! /usr/bin/env stack
+-- stack --resolver nightly-2016-06-21 --verbosity warn runghc --package parsec
+-- vim: set filetype=haskell :
+
+-- Usage:
+--
+-- $ vim
+--
+-- :redir @a
+-- :digraphs
+-- :redir END
+-- "ap
+-- :w raw
+-- :q
+--
+-- $ ./process < raw > README.md
+
+import Text.Parsec
+import Data.Char
+import Data.Monoid
+import Control.Applicative hiding ((<|>))
+
+main :: IO ()
+main = interact f
+
+f :: String -> String
+f x = either show id $ do
+    y <- parse p "" x
+    Right $ unlines $
+        [ "| Digraph ^K- | Char | Unicode point |"
+        , "| ----------- | ---- | ------------- |"
+        ]
+        <>
+        fmap mkLine y
+        <>
+        [
+        ]
+
+mkLine (kybd, uncd, uncdn) = "| " ++ kybd ++ " | " ++ uncd ++ " | " ++ uncdn ++ " |"
+
+psDigraph :: Parsec String () (String, String, String)
+psDigraph = do
+    kybd <- count 2 anyChar
+    string " "
+    uncd0 <- count 1 anyChar
+    uncd1 <- option "" $ Text.Parsec.many $ satisfy (not . isSpace)
+    spaces
+    uncdn <- many1 $ satisfy isDigit
+    return (kybd, uncd0 ++ uncd1, uncdn)
+
+p = do
+    spaces
+    ret <- sepEndBy psDigraph spaces
+    return ret
+
+--- -- parse for one digraph triplet entry
+--- pDigraph :: Parsec String () (String, String, String)
+--- pDigraph = do
+---     kybd <- many1 $ satisfy (not . isSpace)
+---     skipMany1 space
+---     uncd <- many1 $ satisfy (not . isSpace)
+---     skipMany1 space
+---     uncdn <- many1 $ satisfy (not . isSpace)
+---     return (kybd, uncd, uncdn)
+--- 
+--- -- special parser for the Space digraph
+--- pDigraphSpace :: Parsec String () (String, String, String)
+--- pDigraphSpace = do
+---     --- string sp
+---     --- sp <- string "SP" <|> string "NS"
+---     sp <- foldl1 (<|>) $ fmap string ["SP", "NS", "1N", "1M", "3M", "4M", "6M", "1T", "1H"]
+---     --- sp <- foldl1 (<|>) $ fmap string ["SP", "NS", "1M", "1N", "3M", "4M", "6M", "1T", "1H"]
+---     skipMany1 space
+---     uncdn <- many1 $ satisfy (not . isSpace)
+---     return (sp, " ", uncdn)
+---   --- where
+---   ---   sp = "SP"

@@ -5,7 +5,7 @@
 <style>
 body {
 color: #aaaaaa;
-background-color: #222222;
+background-color: #181818;
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 padding:1em;
 font-size:1.2em;
@@ -18,37 +18,11 @@ font-weight:normal;
 color:#aaaaaa;
 }
 
-
 h1 {
-margin-top:5em;
+font-size: 1.5em;
+margin-top:.3em;
 margin-bottom:1em;
 }
-
-h2 {
-margin-top:4em;
-margin-bottom:1em;
-border-top: 1px solid #444;
-padding-top:.5em;
-}
-
-h3 {
-margin-top:2em;
-margin-bottom:.5em;
-}
-
-h4 {
-margin-top:1em;
-margin-bottom:.5em;
-}
-
-h5 {
-margin-top:1em;
-}
-
-h6 {
-margin-top:.5em;
-}
-
 
 a:link, a:visited {
 text-decoration: none;
@@ -56,15 +30,8 @@ color: #AAAACC;
 }
 
 a:hover {
-text-decoration: underline;
+text-decoration: none;
 }
-
-blockquote {
-margin-left: 1em;
-padding-left: 1em;
-border-left: .2em solid #444444;
-}
-
 
 /* http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/ */
 pre,
@@ -77,46 +44,22 @@ font-size:1em;
 color: white!important;
 }
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+p { margin-bottom:.5em; margin-top:0;}
 
-table th,
-table td {
-	text-align: left;
-	vertical-align: top;
-}
+em { font-variant:italic; color:white;}
 
-table thead th {
-	vertical-align: bottom;
-}
+table.dgref { border-collapse: separate; border-spacing:5px; width: 22em; display: inline-block; margin-top:2em; }
+table.dgref>tbody>tr>td:nth-child(1) { letter-spacing:.2em; padding:.2em; font-family:monospace,monospace; border: 1px solid #333333; background-color:#111111;}
+table.dgref>tbody>tr>td:nth-child(2) { padding-left: .4em; padding-right:.4em; font-size:120%; border: 1px solid #333333; text-align: center; transition: background-color 0.5s ease-out;}
+table.dgref>tbody>tr>td:nth-child(2):hover { color:white!important; background-color:#222222; }
+table.dgref>tbody>tr>td:nth-child(3) { font-size:.75em; }
 
-/*
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-	border-top: 0;
-}
-*/
-
-em {
-color:white!important;
-}
-
-b {
-color:white!important;
-}
-
-i {
-color:white!important;
-}
-
-strong {
-color:white!important;
-}
 </style>
+<title>VIM Digraph Reference</title>
 </head>
 <body>
+<h1>VIM Digraph Reference</h1>
+<p>To enter the glyph into <em>VIM insert mode</em>, type <kbd>Ctrl-K</kbd> followed by the two-letter digraph code. Each glyph is hyperlinked to its Wikipedia entry. Glyphs are listed in the order in which they appear from the <kbd>:digraphs</kbd> command.
 <table class="dgref">
 <tbody>
 <tr><td>NU</td><td><a href="https://en.wikipedia.org/wiki/^@">^@</a></td><td>10</td><td>Null character</td></tr>
@@ -129,6 +72,10 @@ color:white!important;
 <tr><td>BL</td><td><a href="https://en.wikipedia.org/wiki/^G">^G</a></td><td>7</td><td>Bell character</td></tr>
 <tr><td>BS</td><td><a href="https://en.wikipedia.org/wiki/^H">^H</a></td><td>8</td><td>Backspace</td></tr>
 <tr><td>HT</td><td><a href="https://en.wikipedia.org/wiki/^I">^I</a></td><td>9</td><td>Tab key</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>LF</td><td><a href="https://en.wikipedia.org/wiki/^@">^@</a></td><td>10</td><td>Null character</td></tr>
 <tr><td>VT</td><td><a href="https://en.wikipedia.org/wiki/^K">^K</a></td><td>11</td><td>Control key</td></tr>
 <tr><td>FF</td><td><a href="https://en.wikipedia.org/wiki/^L">^L</a></td><td>12</td><td>Page break</td></tr>
@@ -139,6 +86,10 @@ color:white!important;
 <tr><td>D1</td><td><a href="https://en.wikipedia.org/wiki/^Q">^Q</a></td><td>17</td><td>Software flow control</td></tr>
 <tr><td>D2</td><td><a href="https://en.wikipedia.org/wiki/^R">^R</a></td><td>18</td><td>Control key</td></tr>
 <tr><td>D3</td><td><a href="https://en.wikipedia.org/wiki/^S">^S</a></td><td>19</td><td>Software flow control</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>D4</td><td><a href="https://en.wikipedia.org/wiki/^T">^T</a></td><td>20</td><td>Control key</td></tr>
 <tr><td>NK</td><td><a href="https://en.wikipedia.org/wiki/^U">^U</a></td><td>21</td><td>Backspace</td></tr>
 <tr><td>SY</td><td><a href="https://en.wikipedia.org/wiki/^V">^V</a></td><td>22</td><td>Control-V</td></tr>
@@ -149,6 +100,10 @@ color:white!important;
 <tr><td>EC</td><td><a href="https://en.wikipedia.org/wiki/^[">^[</a></td><td>27</td></tr>
 <tr><td>FS</td><td><a href="https://en.wikipedia.org/wiki/^\">^\</a></td><td>28</td><td>C0 and C1 control codes</td></tr>
 <tr><td>GS</td><td><a href="https://en.wikipedia.org/wiki/^]">^]</a></td><td>29</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>RS</td><td><a href="https://en.wikipedia.org/wiki/^^">^^</a></td><td>30</td><td>^^</td></tr>
 <tr><td>US</td><td><a href="https://en.wikipedia.org/wiki/^_">^_</a></td><td>31</td><td>Circumflex</td></tr>
 <tr><td>SP</td><td><a href="https://en.wikipedia.org/wiki/ "> </a></td><td>32</td></tr>
@@ -159,48 +114,24 @@ color:white!important;
 <tr><td>//</td><td><a href="https://en.wikipedia.org/wiki/\">\</a></td><td>92</td><td>Backslash</td></tr>
 <tr><td>)></td><td><a href="https://en.wikipedia.org/wiki/]">]</a></td><td>93</td></tr>
 <tr><td>'></td><td><a href="https://en.wikipedia.org/wiki/^">^</a></td><td>94</td><td>Circumflex</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>'!</td><td><a href="https://en.wikipedia.org/wiki/`">`</a></td><td>96</td><td>Grave accent</td></tr>
 <tr><td>(!</td><td><a href="https://en.wikipedia.org/wiki/{">{</a></td><td>123</td></tr>
 <tr><td>!!</td><td><a href="https://en.wikipedia.org/wiki/|">|</a></td><td>124</td></tr>
 <tr><td>!)</td><td><a href="https://en.wikipedia.org/wiki/}">}</a></td><td>125</td></tr>
 <tr><td>'?</td><td><a href="https://en.wikipedia.org/wiki/~">~</a></td><td>126</td><td>Tilde</td></tr>
 <tr><td>DT</td><td><a href="https://en.wikipedia.org/wiki/^?">^?</a></td><td>127</td><td>Circumflex</td></tr>
-<tr><td>PA</td><td><a href="https://en.wikipedia.org/wiki/<80>"><80></a></td><td>128</td></tr>
-<tr><td>HO</td><td><a href="https://en.wikipedia.org/wiki/<81>"><81></a></td><td>129</td></tr>
-<tr><td>BH</td><td><a href="https://en.wikipedia.org/wiki/<82>"><82></a></td><td>130</td></tr>
-<tr><td>NH</td><td><a href="https://en.wikipedia.org/wiki/<83>"><83></a></td><td>131</td></tr>
-<tr><td>IN</td><td><a href="https://en.wikipedia.org/wiki/<84>"><84></a></td><td>132</td></tr>
-<tr><td>NL</td><td><a href="https://en.wikipedia.org/wiki/<85>"><85></a></td><td>133</td></tr>
-<tr><td>SA</td><td><a href="https://en.wikipedia.org/wiki/<86>"><86></a></td><td>134</td></tr>
-<tr><td>ES</td><td><a href="https://en.wikipedia.org/wiki/<87>"><87></a></td><td>135</td></tr>
-<tr><td>HS</td><td><a href="https://en.wikipedia.org/wiki/<88>"><88></a></td><td>136</td></tr>
-<tr><td>HJ</td><td><a href="https://en.wikipedia.org/wiki/<89>"><89></a></td><td>137</td></tr>
-<tr><td>VS</td><td><a href="https://en.wikipedia.org/wiki/<8a>"><8a></a></td><td>138</td></tr>
-<tr><td>PD</td><td><a href="https://en.wikipedia.org/wiki/<8b>"><8b></a></td><td>139</td></tr>
-<tr><td>PU</td><td><a href="https://en.wikipedia.org/wiki/<8c>"><8c></a></td><td>140</td></tr>
-<tr><td>RI</td><td><a href="https://en.wikipedia.org/wiki/<8d>"><8d></a></td><td>141</td></tr>
-<tr><td>S2</td><td><a href="https://en.wikipedia.org/wiki/<8e>"><8e></a></td><td>142</td></tr>
-<tr><td>S3</td><td><a href="https://en.wikipedia.org/wiki/<8f>"><8f></a></td><td>143</td></tr>
-<tr><td>DC</td><td><a href="https://en.wikipedia.org/wiki/<90>"><90></a></td><td>144</td></tr>
-<tr><td>P1</td><td><a href="https://en.wikipedia.org/wiki/<91>"><91></a></td><td>145</td></tr>
-<tr><td>P2</td><td><a href="https://en.wikipedia.org/wiki/<92>"><92></a></td><td>146</td></tr>
-<tr><td>TS</td><td><a href="https://en.wikipedia.org/wiki/<93>"><93></a></td><td>147</td></tr>
-<tr><td>CC</td><td><a href="https://en.wikipedia.org/wiki/<94>"><94></a></td><td>148</td></tr>
-<tr><td>MW</td><td><a href="https://en.wikipedia.org/wiki/<95>"><95></a></td><td>149</td></tr>
-<tr><td>SG</td><td><a href="https://en.wikipedia.org/wiki/<96>"><96></a></td><td>150</td></tr>
-<tr><td>EG</td><td><a href="https://en.wikipedia.org/wiki/<97>"><97></a></td><td>151</td></tr>
-<tr><td>SS</td><td><a href="https://en.wikipedia.org/wiki/<98>"><98></a></td><td>152</td></tr>
-<tr><td>GC</td><td><a href="https://en.wikipedia.org/wiki/<99>"><99></a></td><td>153</td></tr>
-<tr><td>SC</td><td><a href="https://en.wikipedia.org/wiki/<9a>"><9a></a></td><td>154</td></tr>
-<tr><td>CI</td><td><a href="https://en.wikipedia.org/wiki/<9b>"><9b></a></td><td>155</td></tr>
-<tr><td>ST</td><td><a href="https://en.wikipedia.org/wiki/<9c>"><9c></a></td><td>156</td></tr>
-<tr><td>OC</td><td><a href="https://en.wikipedia.org/wiki/<9d>"><9d></a></td><td>157</td></tr>
-<tr><td>PM</td><td><a href="https://en.wikipedia.org/wiki/<9e>"><9e></a></td><td>158</td></tr>
-<tr><td>AC</td><td><a href="https://en.wikipedia.org/wiki/<9f>"><9f></a></td><td>159</td></tr>
 <tr><td>NS</td><td><a href="https://en.wikipedia.org/wiki/ "> </a></td><td>160</td></tr>
 <tr><td>!I</td><td><a href="https://en.wikipedia.org/wiki/¡">¡</a></td><td>161</td><td>Inverted question and exclamation marks</td></tr>
 <tr><td>Ct</td><td><a href="https://en.wikipedia.org/wiki/¢">¢</a></td><td>162</td><td>Cent (currency)</td></tr>
 <tr><td>Pd</td><td><a href="https://en.wikipedia.org/wiki/£">£</a></td><td>163</td><td>Pound sign</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Cu</td><td><a href="https://en.wikipedia.org/wiki/¤">¤</a></td><td>164</td><td>Currency sign (typography)</td></tr>
 <tr><td>Ye</td><td><a href="https://en.wikipedia.org/wiki/¥">¥</a></td><td>165</td><td>¥</td></tr>
 <tr><td>BB</td><td><a href="https://en.wikipedia.org/wiki/¦">¦</a></td><td>166</td><td>Vertical bar</td></tr>
@@ -211,6 +142,10 @@ color:white!important;
 <tr><td><<</td><td><a href="https://en.wikipedia.org/wiki/«">«</a></td><td>171</td><td>Guillemet</td></tr>
 <tr><td>NO</td><td><a href="https://en.wikipedia.org/wiki/¬">¬</a></td><td>172</td><td>Negation</td></tr>
 <tr><td>--</td><td><a href="https://en.wikipedia.org/wiki/­">­</a></td><td>173</td><td>Soft hyphen</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Rg</td><td><a href="https://en.wikipedia.org/wiki/®">®</a></td><td>174</td><td>Registered trademark symbol</td></tr>
 <tr><td>'m</td><td><a href="https://en.wikipedia.org/wiki/¯">¯</a></td><td>175</td><td>Macron</td></tr>
 <tr><td>DG</td><td><a href="https://en.wikipedia.org/wiki/°">°</a></td><td>176</td><td>Degree symbol</td></tr>
@@ -221,6 +156,10 @@ color:white!important;
 <tr><td>My</td><td><a href="https://en.wikipedia.org/wiki/µ">µ</a></td><td>181</td><td>Mu (letter)</td></tr>
 <tr><td>PI</td><td><a href="https://en.wikipedia.org/wiki/¶">¶</a></td><td>182</td><td>Pilcrow</td></tr>
 <tr><td>.M</td><td><a href="https://en.wikipedia.org/wiki/·">·</a></td><td>183</td><td>Interpunct</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>',</td><td><a href="https://en.wikipedia.org/wiki/¸">¸</a></td><td>184</td><td>Cedilla</td></tr>
 <tr><td>1S</td><td><a href="https://en.wikipedia.org/wiki/¹">¹</a></td><td>185</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>-o</td><td><a href="https://en.wikipedia.org/wiki/º">º</a></td><td>186</td><td>Ordinal indicator</td></tr>
@@ -231,6 +170,10 @@ color:white!important;
 <tr><td>?I</td><td><a href="https://en.wikipedia.org/wiki/¿">¿</a></td><td>191</td><td>Inverted question and exclamation marks</td></tr>
 <tr><td>A!</td><td><a href="https://en.wikipedia.org/wiki/À">À</a></td><td>192</td><td>À</td></tr>
 <tr><td>A'</td><td><a href="https://en.wikipedia.org/wiki/Á">Á</a></td><td>193</td><td>Á</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>A></td><td><a href="https://en.wikipedia.org/wiki/Â">Â</a></td><td>194</td><td>Â</td></tr>
 <tr><td>A?</td><td><a href="https://en.wikipedia.org/wiki/Ã">Ã</a></td><td>195</td><td>Ã</td></tr>
 <tr><td>A:</td><td><a href="https://en.wikipedia.org/wiki/Ä">Ä</a></td><td>196</td><td>Ä</td></tr>
@@ -241,6 +184,10 @@ color:white!important;
 <tr><td>E'</td><td><a href="https://en.wikipedia.org/wiki/É">É</a></td><td>201</td><td>É</td></tr>
 <tr><td>E></td><td><a href="https://en.wikipedia.org/wiki/Ê">Ê</a></td><td>202</td><td>Ê</td></tr>
 <tr><td>E:</td><td><a href="https://en.wikipedia.org/wiki/Ë">Ë</a></td><td>203</td><td>Ë</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>I!</td><td><a href="https://en.wikipedia.org/wiki/Ì">Ì</a></td><td>204</td><td>Ì</td></tr>
 <tr><td>I'</td><td><a href="https://en.wikipedia.org/wiki/Í">Í</a></td><td>205</td><td>Í</td></tr>
 <tr><td>I></td><td><a href="https://en.wikipedia.org/wiki/Î">Î</a></td><td>206</td><td>Î</td></tr>
@@ -251,6 +198,10 @@ color:white!important;
 <tr><td>O'</td><td><a href="https://en.wikipedia.org/wiki/Ó">Ó</a></td><td>211</td><td>Ó</td></tr>
 <tr><td>O></td><td><a href="https://en.wikipedia.org/wiki/Ô">Ô</a></td><td>212</td><td>Circumflex</td></tr>
 <tr><td>O?</td><td><a href="https://en.wikipedia.org/wiki/Õ">Õ</a></td><td>213</td><td>Õ</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>O:</td><td><a href="https://en.wikipedia.org/wiki/Ö">Ö</a></td><td>214</td><td>Ö</td></tr>
 <tr><td>*X</td><td><a href="https://en.wikipedia.org/wiki/×">×</a></td><td>215</td><td>Multiplication sign</td></tr>
 <tr><td>O/</td><td><a href="https://en.wikipedia.org/wiki/Ø">Ø</a></td><td>216</td><td>Ø</td></tr>
@@ -261,6 +212,10 @@ color:white!important;
 <tr><td>Y'</td><td><a href="https://en.wikipedia.org/wiki/Ý">Ý</a></td><td>221</td><td>Acute accent</td></tr>
 <tr><td>TH</td><td><a href="https://en.wikipedia.org/wiki/Þ">Þ</a></td><td>222</td><td>Thorn (letter)</td></tr>
 <tr><td>ss</td><td><a href="https://en.wikipedia.org/wiki/ß">ß</a></td><td>223</td><td>ß</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>a!</td><td><a href="https://en.wikipedia.org/wiki/à">à</a></td><td>224</td><td>À</td></tr>
 <tr><td>a'</td><td><a href="https://en.wikipedia.org/wiki/á">á</a></td><td>225</td><td>Á</td></tr>
 <tr><td>a></td><td><a href="https://en.wikipedia.org/wiki/â">â</a></td><td>226</td><td>Â</td></tr>
@@ -271,6 +226,10 @@ color:white!important;
 <tr><td>c,</td><td><a href="https://en.wikipedia.org/wiki/ç">ç</a></td><td>231</td><td>Ç</td></tr>
 <tr><td>e!</td><td><a href="https://en.wikipedia.org/wiki/è">è</a></td><td>232</td><td>È</td></tr>
 <tr><td>e'</td><td><a href="https://en.wikipedia.org/wiki/é">é</a></td><td>233</td><td>É</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>e></td><td><a href="https://en.wikipedia.org/wiki/ê">ê</a></td><td>234</td><td>Ê</td></tr>
 <tr><td>e:</td><td><a href="https://en.wikipedia.org/wiki/ë">ë</a></td><td>235</td><td>Ë</td></tr>
 <tr><td>i!</td><td><a href="https://en.wikipedia.org/wiki/ì">ì</a></td><td>236</td><td>Ì</td></tr>
@@ -281,6 +240,10 @@ color:white!important;
 <tr><td>n?</td><td><a href="https://en.wikipedia.org/wiki/ñ">ñ</a></td><td>241</td><td>Ñ</td></tr>
 <tr><td>o!</td><td><a href="https://en.wikipedia.org/wiki/ò">ò</a></td><td>242</td><td>Ò</td></tr>
 <tr><td>o'</td><td><a href="https://en.wikipedia.org/wiki/ó">ó</a></td><td>243</td><td>Ó</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>o></td><td><a href="https://en.wikipedia.org/wiki/ô">ô</a></td><td>244</td><td>Circumflex</td></tr>
 <tr><td>o?</td><td><a href="https://en.wikipedia.org/wiki/õ">õ</a></td><td>245</td><td>Õ</td></tr>
 <tr><td>o:</td><td><a href="https://en.wikipedia.org/wiki/ö">ö</a></td><td>246</td><td>Ö</td></tr>
@@ -291,6 +254,10 @@ color:white!important;
 <tr><td>u></td><td><a href="https://en.wikipedia.org/wiki/û">û</a></td><td>251</td><td>Û</td></tr>
 <tr><td>u:</td><td><a href="https://en.wikipedia.org/wiki/ü">ü</a></td><td>252</td><td>Ü</td></tr>
 <tr><td>y'</td><td><a href="https://en.wikipedia.org/wiki/ý">ý</a></td><td>253</td><td>Acute accent</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>th</td><td><a href="https://en.wikipedia.org/wiki/þ">þ</a></td><td>254</td><td>Thorn (letter)</td></tr>
 <tr><td>y:</td><td><a href="https://en.wikipedia.org/wiki/ÿ">ÿ</a></td><td>255</td><td>Diaeresis (diacritic)</td></tr>
 <tr><td>A-</td><td><a href="https://en.wikipedia.org/wiki/Ā">Ā</a></td><td>256</td><td>Ā</td></tr>
@@ -301,6 +268,10 @@ color:white!important;
 <tr><td>a;</td><td><a href="https://en.wikipedia.org/wiki/ą">ą</a></td><td>261</td><td>Ą</td></tr>
 <tr><td>C'</td><td><a href="https://en.wikipedia.org/wiki/Ć">Ć</a></td><td>262</td><td>Ć</td></tr>
 <tr><td>c'</td><td><a href="https://en.wikipedia.org/wiki/ć">ć</a></td><td>263</td><td>Ć</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>C></td><td><a href="https://en.wikipedia.org/wiki/Ĉ">Ĉ</a></td><td>264</td><td>Ĉ</td></tr>
 <tr><td>c></td><td><a href="https://en.wikipedia.org/wiki/ĉ">ĉ</a></td><td>265</td><td>Ĉ</td></tr>
 <tr><td>C.</td><td><a href="https://en.wikipedia.org/wiki/Ċ">Ċ</a></td><td>266</td><td>Ċ</td></tr>
@@ -311,6 +282,10 @@ color:white!important;
 <tr><td>d<</td><td><a href="https://en.wikipedia.org/wiki/ď">ď</a></td><td>271</td><td>Ď</td></tr>
 <tr><td>D/</td><td><a href="https://en.wikipedia.org/wiki/Đ">Đ</a></td><td>272</td><td>D with stroke</td></tr>
 <tr><td>d/</td><td><a href="https://en.wikipedia.org/wiki/đ">đ</a></td><td>273</td><td>D with stroke</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>E-</td><td><a href="https://en.wikipedia.org/wiki/Ē">Ē</a></td><td>274</td><td>Macron</td></tr>
 <tr><td>e-</td><td><a href="https://en.wikipedia.org/wiki/ē">ē</a></td><td>275</td><td>Macron</td></tr>
 <tr><td>E(</td><td><a href="https://en.wikipedia.org/wiki/Ĕ">Ĕ</a></td><td>276</td><td>Breve</td></tr>
@@ -321,6 +296,10 @@ color:white!important;
 <tr><td>e;</td><td><a href="https://en.wikipedia.org/wiki/ę">ę</a></td><td>281</td><td>Ę</td></tr>
 <tr><td>E<</td><td><a href="https://en.wikipedia.org/wiki/Ě">Ě</a></td><td>282</td><td>Ě</td></tr>
 <tr><td>e<</td><td><a href="https://en.wikipedia.org/wiki/ě">ě</a></td><td>283</td><td>Ě</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>G></td><td><a href="https://en.wikipedia.org/wiki/Ĝ">Ĝ</a></td><td>284</td><td>Ĝ</td></tr>
 <tr><td>g></td><td><a href="https://en.wikipedia.org/wiki/ĝ">ĝ</a></td><td>285</td><td>Ĝ</td></tr>
 <tr><td>G(</td><td><a href="https://en.wikipedia.org/wiki/Ğ">Ğ</a></td><td>286</td><td>Ğ</td></tr>
@@ -331,6 +310,10 @@ color:white!important;
 <tr><td>g,</td><td><a href="https://en.wikipedia.org/wiki/ģ">ģ</a></td><td>291</td><td>Cedilla</td></tr>
 <tr><td>H></td><td><a href="https://en.wikipedia.org/wiki/Ĥ">Ĥ</a></td><td>292</td><td>Ĥ</td></tr>
 <tr><td>h></td><td><a href="https://en.wikipedia.org/wiki/ĥ">ĥ</a></td><td>293</td><td>Ĥ</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>H/</td><td><a href="https://en.wikipedia.org/wiki/Ħ">Ħ</a></td><td>294</td><td>H with stroke</td></tr>
 <tr><td>h/</td><td><a href="https://en.wikipedia.org/wiki/ħ">ħ</a></td><td>295</td><td>H with stroke</td></tr>
 <tr><td>I?</td><td><a href="https://en.wikipedia.org/wiki/Ĩ">Ĩ</a></td><td>296</td><td>Tilde</td></tr>
@@ -341,6 +324,10 @@ color:white!important;
 <tr><td>i(</td><td><a href="https://en.wikipedia.org/wiki/ĭ">ĭ</a></td><td>301</td><td>Breve</td></tr>
 <tr><td>I;</td><td><a href="https://en.wikipedia.org/wiki/Į">Į</a></td><td>302</td><td>Ogonek</td></tr>
 <tr><td>i;</td><td><a href="https://en.wikipedia.org/wiki/į">į</a></td><td>303</td><td>Ogonek</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>I.</td><td><a href="https://en.wikipedia.org/wiki/İ">İ</a></td><td>304</td><td>Dotted and dotless I</td></tr>
 <tr><td>i.</td><td><a href="https://en.wikipedia.org/wiki/ı">ı</a></td><td>305</td><td>I</td></tr>
 <tr><td>IJ</td><td><a href="https://en.wikipedia.org/wiki/Ĳ">Ĳ</a></td><td>306</td><td>IJ (digraph)</td></tr>
@@ -351,6 +338,10 @@ color:white!important;
 <tr><td>k,</td><td><a href="https://en.wikipedia.org/wiki/ķ">ķ</a></td><td>311</td><td>Cedilla</td></tr>
 <tr><td>kk</td><td><a href="https://en.wikipedia.org/wiki/ĸ">ĸ</a></td><td>312</td><td>Kra (letter)</td></tr>
 <tr><td>L'</td><td><a href="https://en.wikipedia.org/wiki/Ĺ">Ĺ</a></td><td>313</td><td>Acute accent</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>l'</td><td><a href="https://en.wikipedia.org/wiki/ĺ">ĺ</a></td><td>314</td><td>Acute accent</td></tr>
 <tr><td>L,</td><td><a href="https://en.wikipedia.org/wiki/Ļ">Ļ</a></td><td>315</td><td>Cedilla</td></tr>
 <tr><td>l,</td><td><a href="https://en.wikipedia.org/wiki/ļ">ļ</a></td><td>316</td><td>Cedilla</td></tr>
@@ -361,6 +352,10 @@ color:white!important;
 <tr><td>L/</td><td><a href="https://en.wikipedia.org/wiki/Ł">Ł</a></td><td>321</td><td>Ł</td></tr>
 <tr><td>l/</td><td><a href="https://en.wikipedia.org/wiki/ł">ł</a></td><td>322</td><td>Ł</td></tr>
 <tr><td>N'</td><td><a href="https://en.wikipedia.org/wiki/Ń">Ń</a></td><td>323</td><td>Ń</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>n'</td><td><a href="https://en.wikipedia.org/wiki/ń">ń</a></td><td>324</td><td>Ń</td></tr>
 <tr><td>N,</td><td><a href="https://en.wikipedia.org/wiki/Ņ">Ņ</a></td><td>325</td><td>Cedilla</td></tr>
 <tr><td>n,</td><td><a href="https://en.wikipedia.org/wiki/ņ">ņ</a></td><td>326</td><td>Cedilla</td></tr>
@@ -371,6 +366,10 @@ color:white!important;
 <tr><td>ng</td><td><a href="https://en.wikipedia.org/wiki/ŋ">ŋ</a></td><td>331</td><td>Eng (letter)</td></tr>
 <tr><td>O-</td><td><a href="https://en.wikipedia.org/wiki/Ō">Ō</a></td><td>332</td><td>Macron</td></tr>
 <tr><td>o-</td><td><a href="https://en.wikipedia.org/wiki/ō">ō</a></td><td>333</td><td>Macron</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>O(</td><td><a href="https://en.wikipedia.org/wiki/Ŏ">Ŏ</a></td><td>334</td><td>Breve</td></tr>
 <tr><td>o(</td><td><a href="https://en.wikipedia.org/wiki/ŏ">ŏ</a></td><td>335</td><td>Breve</td></tr>
 <tr><td>O"</td><td><a href="https://en.wikipedia.org/wiki/Ő">Ő</a></td><td>336</td><td>Double acute accent</td></tr>
@@ -381,6 +380,10 @@ color:white!important;
 <tr><td>r'</td><td><a href="https://en.wikipedia.org/wiki/ŕ">ŕ</a></td><td>341</td><td>Ŕ</td></tr>
 <tr><td>R,</td><td><a href="https://en.wikipedia.org/wiki/Ŗ">Ŗ</a></td><td>342</td><td>Cedilla</td></tr>
 <tr><td>r,</td><td><a href="https://en.wikipedia.org/wiki/ŗ">ŗ</a></td><td>343</td><td>Cedilla</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>R<</td><td><a href="https://en.wikipedia.org/wiki/Ř">Ř</a></td><td>344</td><td>Ř</td></tr>
 <tr><td>r<</td><td><a href="https://en.wikipedia.org/wiki/ř">ř</a></td><td>345</td><td>Ř</td></tr>
 <tr><td>S'</td><td><a href="https://en.wikipedia.org/wiki/Ś">Ś</a></td><td>346</td><td>Ś</td></tr>
@@ -391,6 +394,10 @@ color:white!important;
 <tr><td>s,</td><td><a href="https://en.wikipedia.org/wiki/ş">ş</a></td><td>351</td><td>Ş</td></tr>
 <tr><td>S<</td><td><a href="https://en.wikipedia.org/wiki/Š">Š</a></td><td>352</td><td>Š</td></tr>
 <tr><td>s<</td><td><a href="https://en.wikipedia.org/wiki/š">š</a></td><td>353</td><td>Š</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>T,</td><td><a href="https://en.wikipedia.org/wiki/Ţ">Ţ</a></td><td>354</td><td>Cedilla</td></tr>
 <tr><td>t,</td><td><a href="https://en.wikipedia.org/wiki/ţ">ţ</a></td><td>355</td><td>Cedilla</td></tr>
 <tr><td>T<</td><td><a href="https://en.wikipedia.org/wiki/Ť">Ť</a></td><td>356</td><td>Ť</td></tr>
@@ -401,6 +408,10 @@ color:white!important;
 <tr><td>u?</td><td><a href="https://en.wikipedia.org/wiki/ũ">ũ</a></td><td>361</td><td>Tilde</td></tr>
 <tr><td>U-</td><td><a href="https://en.wikipedia.org/wiki/Ū">Ū</a></td><td>362</td><td>Macron</td></tr>
 <tr><td>u-</td><td><a href="https://en.wikipedia.org/wiki/ū">ū</a></td><td>363</td><td>Macron</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>U(</td><td><a href="https://en.wikipedia.org/wiki/Ŭ">Ŭ</a></td><td>364</td><td>Ŭ</td></tr>
 <tr><td>u(</td><td><a href="https://en.wikipedia.org/wiki/ŭ">ŭ</a></td><td>365</td><td>Ŭ</td></tr>
 <tr><td>U0</td><td><a href="https://en.wikipedia.org/wiki/Ů">Ů</a></td><td>366</td><td>Ring (diacritic)</td></tr>
@@ -411,6 +422,10 @@ color:white!important;
 <tr><td>u;</td><td><a href="https://en.wikipedia.org/wiki/ų">ų</a></td><td>371</td><td>Ogonek</td></tr>
 <tr><td>W></td><td><a href="https://en.wikipedia.org/wiki/Ŵ">Ŵ</a></td><td>372</td><td>Circumflex</td></tr>
 <tr><td>w></td><td><a href="https://en.wikipedia.org/wiki/ŵ">ŵ</a></td><td>373</td><td>Circumflex</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Y></td><td><a href="https://en.wikipedia.org/wiki/Ŷ">Ŷ</a></td><td>374</td><td>Circumflex</td></tr>
 <tr><td>y></td><td><a href="https://en.wikipedia.org/wiki/ŷ">ŷ</a></td><td>375</td><td>Circumflex</td></tr>
 <tr><td>Y:</td><td><a href="https://en.wikipedia.org/wiki/Ÿ">Ÿ</a></td><td>376</td><td>Diaeresis (diacritic)</td></tr>
@@ -421,6 +436,10 @@ color:white!important;
 <tr><td>Z<</td><td><a href="https://en.wikipedia.org/wiki/Ž">Ž</a></td><td>381</td><td>Ž</td></tr>
 <tr><td>z<</td><td><a href="https://en.wikipedia.org/wiki/ž">ž</a></td><td>382</td><td>Ž</td></tr>
 <tr><td>O9</td><td><a href="https://en.wikipedia.org/wiki/Ơ">Ơ</a></td><td>416</td><td>Ơ</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>o9</td><td><a href="https://en.wikipedia.org/wiki/ơ">ơ</a></td><td>417</td><td>Ơ</td></tr>
 <tr><td>OI</td><td><a href="https://en.wikipedia.org/wiki/Ƣ">Ƣ</a></td><td>418</td><td>Gha</td></tr>
 <tr><td>oi</td><td><a href="https://en.wikipedia.org/wiki/ƣ">ƣ</a></td><td>419</td><td>Gha</td></tr>
@@ -431,6 +450,10 @@ color:white!important;
 <tr><td>z/</td><td><a href="https://en.wikipedia.org/wiki/ƶ">ƶ</a></td><td>438</td><td>Z with stroke</td></tr>
 <tr><td>ED</td><td><a href="https://en.wikipedia.org/wiki/Ʒ">Ʒ</a></td><td>439</td><td>Ezh</td></tr>
 <tr><td>A<</td><td><a href="https://en.wikipedia.org/wiki/Ǎ">Ǎ</a></td><td>461</td><td>Caron</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>a<</td><td><a href="https://en.wikipedia.org/wiki/ǎ">ǎ</a></td><td>462</td><td>Caron</td></tr>
 <tr><td>I<</td><td><a href="https://en.wikipedia.org/wiki/Ǐ">Ǐ</a></td><td>463</td><td>Caron</td></tr>
 <tr><td>i<</td><td><a href="https://en.wikipedia.org/wiki/ǐ">ǐ</a></td><td>464</td><td>Caron</td></tr>
@@ -441,6 +464,10 @@ color:white!important;
 <tr><td>A1</td><td><a href="https://en.wikipedia.org/wiki/Ǟ">Ǟ</a></td><td>478</td><td>Ä</td></tr>
 <tr><td>a1</td><td><a href="https://en.wikipedia.org/wiki/ǟ">ǟ</a></td><td>479</td><td>Ä</td></tr>
 <tr><td>A7</td><td><a href="https://en.wikipedia.org/wiki/Ǡ">Ǡ</a></td><td>480</td><td>Ȧ</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>a7</td><td><a href="https://en.wikipedia.org/wiki/ǡ">ǡ</a></td><td>481</td><td>Ȧ</td></tr>
 <tr><td>A3</td><td><a href="https://en.wikipedia.org/wiki/Ǣ">Ǣ</a></td><td>482</td><td>Macron</td></tr>
 <tr><td>a3</td><td><a href="https://en.wikipedia.org/wiki/ǣ">ǣ</a></td><td>483</td><td>Macron</td></tr>
@@ -451,6 +478,10 @@ color:white!important;
 <tr><td>K<</td><td><a href="https://en.wikipedia.org/wiki/Ǩ">Ǩ</a></td><td>488</td><td>Ǩ</td></tr>
 <tr><td>k<</td><td><a href="https://en.wikipedia.org/wiki/ǩ">ǩ</a></td><td>489</td><td>Ǩ</td></tr>
 <tr><td>O;</td><td><a href="https://en.wikipedia.org/wiki/Ǫ">Ǫ</a></td><td>490</td><td>Ogonek</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>o;</td><td><a href="https://en.wikipedia.org/wiki/ǫ">ǫ</a></td><td>491</td><td>Ogonek</td></tr>
 <tr><td>O1</td><td><a href="https://en.wikipedia.org/wiki/Ǭ">Ǭ</a></td><td>492</td><td>Ogonek</td></tr>
 <tr><td>o1</td><td><a href="https://en.wikipedia.org/wiki/ǭ">ǭ</a></td><td>493</td><td>Ogonek</td></tr>
@@ -461,6 +492,10 @@ color:white!important;
 <tr><td>g'</td><td><a href="https://en.wikipedia.org/wiki/ǵ">ǵ</a></td><td>501</td><td>Ǵ</td></tr>
 <tr><td>;S</td><td><a href="https://en.wikipedia.org/wiki/ʿ">ʿ</a></td><td>703</td><td>Modifier letter left half ring</td></tr>
 <tr><td>'<</td><td><a href="https://en.wikipedia.org/wiki/ˇ">ˇ</a></td><td>711</td><td>Caron</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>'(</td><td><a href="https://en.wikipedia.org/wiki/˘">˘</a></td><td>728</td><td>Breve</td></tr>
 <tr><td>'.</td><td><a href="https://en.wikipedia.org/wiki/˙">˙</a></td><td>729</td><td>Dot (diacritic)</td></tr>
 <tr><td>'0</td><td><a href="https://en.wikipedia.org/wiki/˚">˚</a></td><td>730</td><td>Ring (diacritic)</td></tr>
@@ -471,6 +506,10 @@ color:white!important;
 <tr><td>Y%</td><td><a href="https://en.wikipedia.org/wiki/Ή">Ή</a></td><td>905</td><td>Greek diacritics</td></tr>
 <tr><td>I%</td><td><a href="https://en.wikipedia.org/wiki/Ί">Ί</a></td><td>906</td><td>Greek diacritics</td></tr>
 <tr><td>O%</td><td><a href="https://en.wikipedia.org/wiki/Ό">Ό</a></td><td>908</td><td>Greek diacritics</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>U%</td><td><a href="https://en.wikipedia.org/wiki/Ύ">Ύ</a></td><td>910</td><td>Greek diacritics</td></tr>
 <tr><td>W%</td><td><a href="https://en.wikipedia.org/wiki/Ώ">Ώ</a></td><td>911</td><td>Greek diacritics</td></tr>
 <tr><td>i3</td><td><a href="https://en.wikipedia.org/wiki/ΐ">ΐ</a></td><td>912</td><td>Greek diacritics</td></tr>
@@ -481,6 +520,10 @@ color:white!important;
 <tr><td>E*</td><td><a href="https://en.wikipedia.org/wiki/Ε">Ε</a></td><td>917</td><td>Epsilon</td></tr>
 <tr><td>Z*</td><td><a href="https://en.wikipedia.org/wiki/Ζ">Ζ</a></td><td>918</td><td>Zeta</td></tr>
 <tr><td>Y*</td><td><a href="https://en.wikipedia.org/wiki/Η">Η</a></td><td>919</td><td>Eta</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>H*</td><td><a href="https://en.wikipedia.org/wiki/Θ">Θ</a></td><td>920</td><td>Theta</td></tr>
 <tr><td>I*</td><td><a href="https://en.wikipedia.org/wiki/Ι">Ι</a></td><td>921</td><td>Iota</td></tr>
 <tr><td>K*</td><td><a href="https://en.wikipedia.org/wiki/Κ">Κ</a></td><td>922</td><td>Kappa</td></tr>
@@ -491,6 +534,10 @@ color:white!important;
 <tr><td>O*</td><td><a href="https://en.wikipedia.org/wiki/Ο">Ο</a></td><td>927</td><td>Omicron</td></tr>
 <tr><td>P*</td><td><a href="https://en.wikipedia.org/wiki/Π">Π</a></td><td>928</td><td>Pi</td></tr>
 <tr><td>R*</td><td><a href="https://en.wikipedia.org/wiki/Ρ">Ρ</a></td><td>929</td><td>Rho</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>S*</td><td><a href="https://en.wikipedia.org/wiki/Σ">Σ</a></td><td>931</td><td>Sigma</td></tr>
 <tr><td>T*</td><td><a href="https://en.wikipedia.org/wiki/Τ">Τ</a></td><td>932</td><td>Tau</td></tr>
 <tr><td>U*</td><td><a href="https://en.wikipedia.org/wiki/Υ">Υ</a></td><td>933</td><td>Upsilon</td></tr>
@@ -501,6 +548,10 @@ color:white!important;
 <tr><td>J*</td><td><a href="https://en.wikipedia.org/wiki/Ϊ">Ϊ</a></td><td>938</td><td>Greek diacritics</td></tr>
 <tr><td>V*</td><td><a href="https://en.wikipedia.org/wiki/Ϋ">Ϋ</a></td><td>939</td><td>Greek diacritics</td></tr>
 <tr><td>a%</td><td><a href="https://en.wikipedia.org/wiki/ά">ά</a></td><td>940</td><td>Greek diacritics</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>e%</td><td><a href="https://en.wikipedia.org/wiki/έ">έ</a></td><td>941</td><td>Greek diacritics</td></tr>
 <tr><td>y%</td><td><a href="https://en.wikipedia.org/wiki/ή">ή</a></td><td>942</td><td>Greek diacritics</td></tr>
 <tr><td>i%</td><td><a href="https://en.wikipedia.org/wiki/ί">ί</a></td><td>943</td><td>Greek diacritics</td></tr>
@@ -511,6 +562,10 @@ color:white!important;
 <tr><td>d*</td><td><a href="https://en.wikipedia.org/wiki/δ">δ</a></td><td>948</td><td>Delta (letter)</td></tr>
 <tr><td>e*</td><td><a href="https://en.wikipedia.org/wiki/ε">ε</a></td><td>949</td><td>Epsilon</td></tr>
 <tr><td>z*</td><td><a href="https://en.wikipedia.org/wiki/ζ">ζ</a></td><td>950</td><td>Zeta</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>y*</td><td><a href="https://en.wikipedia.org/wiki/η">η</a></td><td>951</td><td>Eta</td></tr>
 <tr><td>h*</td><td><a href="https://en.wikipedia.org/wiki/θ">θ</a></td><td>952</td><td>Theta</td></tr>
 <tr><td>i*</td><td><a href="https://en.wikipedia.org/wiki/ι">ι</a></td><td>953</td><td>Iota</td></tr>
@@ -521,6 +576,10 @@ color:white!important;
 <tr><td>c*</td><td><a href="https://en.wikipedia.org/wiki/ξ">ξ</a></td><td>958</td><td>Xi (letter)</td></tr>
 <tr><td>o*</td><td><a href="https://en.wikipedia.org/wiki/ο">ο</a></td><td>959</td><td>Omicron</td></tr>
 <tr><td>p*</td><td><a href="https://en.wikipedia.org/wiki/π">π</a></td><td>960</td><td>Pi</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>r*</td><td><a href="https://en.wikipedia.org/wiki/ρ">ρ</a></td><td>961</td><td>Rho</td></tr>
 <tr><td>*s</td><td><a href="https://en.wikipedia.org/wiki/ς">ς</a></td><td>962</td><td>Sigma</td></tr>
 <tr><td>s*</td><td><a href="https://en.wikipedia.org/wiki/σ">σ</a></td><td>963</td><td>Sigma</td></tr>
@@ -531,6 +590,10 @@ color:white!important;
 <tr><td>q*</td><td><a href="https://en.wikipedia.org/wiki/ψ">ψ</a></td><td>968</td><td>Psi (letter)</td></tr>
 <tr><td>w*</td><td><a href="https://en.wikipedia.org/wiki/ω">ω</a></td><td>969</td><td>Omega</td></tr>
 <tr><td>j*</td><td><a href="https://en.wikipedia.org/wiki/ϊ">ϊ</a></td><td>970</td><td>Greek diacritics</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>v*</td><td><a href="https://en.wikipedia.org/wiki/ϋ">ϋ</a></td><td>971</td><td>Greek diacritics</td></tr>
 <tr><td>o%</td><td><a href="https://en.wikipedia.org/wiki/ό">ό</a></td><td>972</td><td>Greek diacritics</td></tr>
 <tr><td>u%</td><td><a href="https://en.wikipedia.org/wiki/ύ">ύ</a></td><td>973</td><td>Greek diacritics</td></tr>
@@ -541,6 +604,10 @@ color:white!important;
 <tr><td>t3</td><td><a href="https://en.wikipedia.org/wiki/ϛ">ϛ</a></td><td>987</td><td>Stigma (letter)</td></tr>
 <tr><td>M3</td><td><a href="https://en.wikipedia.org/wiki/Ϝ">Ϝ</a></td><td>988</td><td>Digamma</td></tr>
 <tr><td>m3</td><td><a href="https://en.wikipedia.org/wiki/ϝ">ϝ</a></td><td>989</td><td>Digamma</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>K3</td><td><a href="https://en.wikipedia.org/wiki/Ϟ">Ϟ</a></td><td>990</td><td>Koppa (letter)</td></tr>
 <tr><td>k3</td><td><a href="https://en.wikipedia.org/wiki/ϟ">ϟ</a></td><td>991</td><td>Koppa (letter)</td></tr>
 <tr><td>P3</td><td><a href="https://en.wikipedia.org/wiki/Ϡ">Ϡ</a></td><td>992</td><td>Sampi</td></tr>
@@ -551,6 +618,10 @@ color:white!important;
 <tr><td>D%</td><td><a href="https://en.wikipedia.org/wiki/Ђ">Ђ</a></td><td>1026</td><td>Dje</td></tr>
 <tr><td>G%</td><td><a href="https://en.wikipedia.org/wiki/Ѓ">Ѓ</a></td><td>1027</td><td>Gje</td></tr>
 <tr><td>IE</td><td><a href="https://en.wikipedia.org/wiki/Є">Є</a></td><td>1028</td><td>Ukrainian Ye</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>DS</td><td><a href="https://en.wikipedia.org/wiki/Ѕ">Ѕ</a></td><td>1029</td><td>Dze</td></tr>
 <tr><td>II</td><td><a href="https://en.wikipedia.org/wiki/І">І</a></td><td>1030</td><td>Dotted I (Cyrillic)</td></tr>
 <tr><td>YI</td><td><a href="https://en.wikipedia.org/wiki/Ї">Ї</a></td><td>1031</td><td>Yi (Cyrillic)</td></tr>
@@ -561,6 +632,10 @@ color:white!important;
 <tr><td>KJ</td><td><a href="https://en.wikipedia.org/wiki/Ќ">Ќ</a></td><td>1036</td><td>Kje</td></tr>
 <tr><td>V%</td><td><a href="https://en.wikipedia.org/wiki/Ў">Ў</a></td><td>1038</td><td>Short U (Cyrillic)</td></tr>
 <tr><td>DZ</td><td><a href="https://en.wikipedia.org/wiki/Џ">Џ</a></td><td>1039</td><td>Dzhe</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>A=</td><td><a href="https://en.wikipedia.org/wiki/А">А</a></td><td>1040</td><td>A (Cyrillic)</td></tr>
 <tr><td>B=</td><td><a href="https://en.wikipedia.org/wiki/Б">Б</a></td><td>1041</td><td>Be (Cyrillic)</td></tr>
 <tr><td>V=</td><td><a href="https://en.wikipedia.org/wiki/В">В</a></td><td>1042</td><td>Ve (Cyrillic)</td></tr>
@@ -571,6 +646,10 @@ color:white!important;
 <tr><td>Z=</td><td><a href="https://en.wikipedia.org/wiki/З">З</a></td><td>1047</td><td>Ze (Cyrillic)</td></tr>
 <tr><td>I=</td><td><a href="https://en.wikipedia.org/wiki/И">И</a></td><td>1048</td><td>I (Cyrillic)</td></tr>
 <tr><td>J=</td><td><a href="https://en.wikipedia.org/wiki/Й">Й</a></td><td>1049</td><td>Short I</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>K=</td><td><a href="https://en.wikipedia.org/wiki/К">К</a></td><td>1050</td><td>Ka (Cyrillic)</td></tr>
 <tr><td>L=</td><td><a href="https://en.wikipedia.org/wiki/Л">Л</a></td><td>1051</td><td>El (Cyrillic)</td></tr>
 <tr><td>M=</td><td><a href="https://en.wikipedia.org/wiki/М">М</a></td><td>1052</td><td>Em (Cyrillic)</td></tr>
@@ -581,6 +660,10 @@ color:white!important;
 <tr><td>S=</td><td><a href="https://en.wikipedia.org/wiki/С">С</a></td><td>1057</td><td>Es (Cyrillic)</td></tr>
 <tr><td>T=</td><td><a href="https://en.wikipedia.org/wiki/Т">Т</a></td><td>1058</td><td>Te (Cyrillic)</td></tr>
 <tr><td>U=</td><td><a href="https://en.wikipedia.org/wiki/У">У</a></td><td>1059</td><td>U (Cyrillic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>F=</td><td><a href="https://en.wikipedia.org/wiki/Ф">Ф</a></td><td>1060</td><td>Ef (Cyrillic)</td></tr>
 <tr><td>H=</td><td><a href="https://en.wikipedia.org/wiki/Х">Х</a></td><td>1061</td><td>Kha (Cyrillic)</td></tr>
 <tr><td>C=</td><td><a href="https://en.wikipedia.org/wiki/Ц">Ц</a></td><td>1062</td><td>Tse (Cyrillic)</td></tr>
@@ -591,6 +674,10 @@ color:white!important;
 <tr><td>Y=</td><td><a href="https://en.wikipedia.org/wiki/Ы">Ы</a></td><td>1067</td><td>Yery</td></tr>
 <tr><td>%"</td><td><a href="https://en.wikipedia.org/wiki/Ь">Ь</a></td><td>1068</td><td>Soft sign</td></tr>
 <tr><td>JE</td><td><a href="https://en.wikipedia.org/wiki/Э">Э</a></td><td>1069</td><td>E (Cyrillic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>JU</td><td><a href="https://en.wikipedia.org/wiki/Ю">Ю</a></td><td>1070</td><td>Yu (Cyrillic)</td></tr>
 <tr><td>JA</td><td><a href="https://en.wikipedia.org/wiki/Я">Я</a></td><td>1071</td><td>Ya (Cyrillic)</td></tr>
 <tr><td>a=</td><td><a href="https://en.wikipedia.org/wiki/а">а</a></td><td>1072</td><td>A (Cyrillic)</td></tr>
@@ -601,6 +688,10 @@ color:white!important;
 <tr><td>e=</td><td><a href="https://en.wikipedia.org/wiki/е">е</a></td><td>1077</td><td>Ye (Cyrillic)</td></tr>
 <tr><td>z%</td><td><a href="https://en.wikipedia.org/wiki/ж">ж</a></td><td>1078</td><td>Zhe (Cyrillic)</td></tr>
 <tr><td>z=</td><td><a href="https://en.wikipedia.org/wiki/з">з</a></td><td>1079</td><td>Ze (Cyrillic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>i=</td><td><a href="https://en.wikipedia.org/wiki/и">и</a></td><td>1080</td><td>I (Cyrillic)</td></tr>
 <tr><td>j=</td><td><a href="https://en.wikipedia.org/wiki/й">й</a></td><td>1081</td><td>Short I</td></tr>
 <tr><td>k=</td><td><a href="https://en.wikipedia.org/wiki/к">к</a></td><td>1082</td><td>Ka (Cyrillic)</td></tr>
@@ -611,6 +702,10 @@ color:white!important;
 <tr><td>p=</td><td><a href="https://en.wikipedia.org/wiki/п">п</a></td><td>1087</td><td>Pe (Cyrillic)</td></tr>
 <tr><td>r=</td><td><a href="https://en.wikipedia.org/wiki/р">р</a></td><td>1088</td><td>Er (Cyrillic)</td></tr>
 <tr><td>s=</td><td><a href="https://en.wikipedia.org/wiki/с">с</a></td><td>1089</td><td>Es (Cyrillic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>t=</td><td><a href="https://en.wikipedia.org/wiki/т">т</a></td><td>1090</td><td>Te (Cyrillic)</td></tr>
 <tr><td>u=</td><td><a href="https://en.wikipedia.org/wiki/у">у</a></td><td>1091</td><td>U (Cyrillic)</td></tr>
 <tr><td>f=</td><td><a href="https://en.wikipedia.org/wiki/ф">ф</a></td><td>1092</td><td>Ef (Cyrillic)</td></tr>
@@ -621,6 +716,10 @@ color:white!important;
 <tr><td>sc</td><td><a href="https://en.wikipedia.org/wiki/щ">щ</a></td><td>1097</td><td>Shcha</td></tr>
 <tr><td>='</td><td><a href="https://en.wikipedia.org/wiki/ъ">ъ</a></td><td>1098</td><td>Ъ</td></tr>
 <tr><td>y=</td><td><a href="https://en.wikipedia.org/wiki/ы">ы</a></td><td>1099</td><td>Yery</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>%'</td><td><a href="https://en.wikipedia.org/wiki/ь">ь</a></td><td>1100</td><td>Soft sign</td></tr>
 <tr><td>je</td><td><a href="https://en.wikipedia.org/wiki/э">э</a></td><td>1101</td><td>E (Cyrillic)</td></tr>
 <tr><td>ju</td><td><a href="https://en.wikipedia.org/wiki/ю">ю</a></td><td>1102</td><td>Yu (Cyrillic)</td></tr>
@@ -631,6 +730,10 @@ color:white!important;
 <tr><td>ie</td><td><a href="https://en.wikipedia.org/wiki/є">є</a></td><td>1108</td><td>Ukrainian Ye</td></tr>
 <tr><td>ds</td><td><a href="https://en.wikipedia.org/wiki/ѕ">ѕ</a></td><td>1109</td><td>Dze</td></tr>
 <tr><td>ii</td><td><a href="https://en.wikipedia.org/wiki/і">і</a></td><td>1110</td><td>Dotted I (Cyrillic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>yi</td><td><a href="https://en.wikipedia.org/wiki/ї">ї</a></td><td>1111</td><td>Yi (Cyrillic)</td></tr>
 <tr><td>j%</td><td><a href="https://en.wikipedia.org/wiki/ј">ј</a></td><td>1112</td><td>Je (Cyrillic)</td></tr>
 <tr><td>lj</td><td><a href="https://en.wikipedia.org/wiki/љ">љ</a></td><td>1113</td><td>Lje</td></tr>
@@ -641,6 +744,10 @@ color:white!important;
 <tr><td>dz</td><td><a href="https://en.wikipedia.org/wiki/џ">џ</a></td><td>1119</td><td>Dzhe</td></tr>
 <tr><td>Y3</td><td><a href="https://en.wikipedia.org/wiki/Ѣ">Ѣ</a></td><td>1122</td><td>Yat</td></tr>
 <tr><td>y3</td><td><a href="https://en.wikipedia.org/wiki/ѣ">ѣ</a></td><td>1123</td><td>Yat</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>O3</td><td><a href="https://en.wikipedia.org/wiki/Ѫ">Ѫ</a></td><td>1130</td><td>Yus</td></tr>
 <tr><td>o3</td><td><a href="https://en.wikipedia.org/wiki/ѫ">ѫ</a></td><td>1131</td><td>Yus</td></tr>
 <tr><td>F3</td><td><a href="https://en.wikipedia.org/wiki/Ѳ">Ѳ</a></td><td>1138</td><td>Fita</td></tr>
@@ -651,6 +758,10 @@ color:white!important;
 <tr><td>c3</td><td><a href="https://en.wikipedia.org/wiki/ҁ">ҁ</a></td><td>1153</td><td>Koppa (Cyrillic)</td></tr>
 <tr><td>G3</td><td><a href="https://en.wikipedia.org/wiki/Ґ">Ґ</a></td><td>1168</td><td>Ghe with upturn</td></tr>
 <tr><td>g3</td><td><a href="https://en.wikipedia.org/wiki/ґ">ґ</a></td><td>1169</td><td>Ghe with upturn</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>A+</td><td><a href="https://en.wikipedia.org/wiki/א">א</a></td><td>1488</td><td>Aleph</td></tr>
 <tr><td>B+</td><td><a href="https://en.wikipedia.org/wiki/ב">ב</a></td><td>1489</td><td>Bet (letter)</td></tr>
 <tr><td>G+</td><td><a href="https://en.wikipedia.org/wiki/ג">ג</a></td><td>1490</td><td>Gimel</td></tr>
@@ -661,6 +772,10 @@ color:white!important;
 <tr><td>X+</td><td><a href="https://en.wikipedia.org/wiki/ח">ח</a></td><td>1495</td><td>Heth</td></tr>
 <tr><td>Tj</td><td><a href="https://en.wikipedia.org/wiki/ט">ט</a></td><td>1496</td><td>Teth</td></tr>
 <tr><td>J+</td><td><a href="https://en.wikipedia.org/wiki/י">י</a></td><td>1497</td><td>Yodh</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>K%</td><td><a href="https://en.wikipedia.org/wiki/ך">ך</a></td><td>1498</td><td>Kaph</td></tr>
 <tr><td>K+</td><td><a href="https://en.wikipedia.org/wiki/כ">כ</a></td><td>1499</td><td>Kaph</td></tr>
 <tr><td>L+</td><td><a href="https://en.wikipedia.org/wiki/ל">ל</a></td><td>1500</td><td>Lamedh</td></tr>
@@ -671,6 +786,10 @@ color:white!important;
 <tr><td>S+</td><td><a href="https://en.wikipedia.org/wiki/ס">ס</a></td><td>1505</td><td>Samekh</td></tr>
 <tr><td>E+</td><td><a href="https://en.wikipedia.org/wiki/ע">ע</a></td><td>1506</td><td>Ayin</td></tr>
 <tr><td>P%</td><td><a href="https://en.wikipedia.org/wiki/ף">ף</a></td><td>1507</td><td>Pe (letter)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>P+</td><td><a href="https://en.wikipedia.org/wiki/פ">פ</a></td><td>1508</td><td>Pe (letter)</td></tr>
 <tr><td>Zj</td><td><a href="https://en.wikipedia.org/wiki/ץ">ץ</a></td><td>1509</td><td>Tsade</td></tr>
 <tr><td>ZJ</td><td><a href="https://en.wikipedia.org/wiki/צ">צ</a></td><td>1510</td><td>Tsade</td></tr>
@@ -681,6 +800,10 @@ color:white!important;
 <tr><td>,+</td><td><a href="https://en.wikipedia.org/wiki/،">،</a></td><td>1548</td><td>Comma</td></tr>
 <tr><td>;+</td><td><a href="https://en.wikipedia.org/wiki/؛">؛</a></td><td>1563</td><td>Semicolon</td></tr>
 <tr><td>?+</td><td><a href="https://en.wikipedia.org/wiki/؟">؟</a></td><td>1567</td><td>Question mark</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>H'</td><td><a href="https://en.wikipedia.org/wiki/ء">ء</a></td><td>1569</td><td>Hamza</td></tr>
 <tr><td>aM</td><td><a href="https://en.wikipedia.org/wiki/آ">آ</a></td><td>1570</td><td>Arabic diacritics</td></tr>
 <tr><td>aH</td><td><a href="https://en.wikipedia.org/wiki/أ">أ</a></td><td>1571</td><td>Hamza</td></tr>
@@ -691,6 +814,10 @@ color:white!important;
 <tr><td>b+</td><td><a href="https://en.wikipedia.org/wiki/ب">ب</a></td><td>1576</td><td>Bet (letter)</td></tr>
 <tr><td>tm</td><td><a href="https://en.wikipedia.org/wiki/ة">ة</a></td><td>1577</td><td>Taw</td></tr>
 <tr><td>t+</td><td><a href="https://en.wikipedia.org/wiki/ت">ت</a></td><td>1578</td><td>Taw</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>tk</td><td><a href="https://en.wikipedia.org/wiki/ث">ث</a></td><td>1579</td><td>Ṯāʾ</td></tr>
 <tr><td>g+</td><td><a href="https://en.wikipedia.org/wiki/ج">ج</a></td><td>1580</td><td>Gimel</td></tr>
 <tr><td>hk</td><td><a href="https://en.wikipedia.org/wiki/ح">ح</a></td><td>1581</td><td>Heth</td></tr>
@@ -701,6 +828,10 @@ color:white!important;
 <tr><td>z+</td><td><a href="https://en.wikipedia.org/wiki/ز">ز</a></td><td>1586</td><td>Zayin</td></tr>
 <tr><td>s+</td><td><a href="https://en.wikipedia.org/wiki/س">س</a></td><td>1587</td><td>Shin (letter)</td></tr>
 <tr><td>sn</td><td><a href="https://en.wikipedia.org/wiki/ش">ش</a></td><td>1588</td><td>Shin (letter)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>c+</td><td><a href="https://en.wikipedia.org/wiki/ص">ص</a></td><td>1589</td><td>Tsade</td></tr>
 <tr><td>dd</td><td><a href="https://en.wikipedia.org/wiki/ض">ض</a></td><td>1590</td><td>Ḍād</td></tr>
 <tr><td>tj</td><td><a href="https://en.wikipedia.org/wiki/ط">ط</a></td><td>1591</td><td>Teth</td></tr>
@@ -711,6 +842,10 @@ color:white!important;
 <tr><td>f+</td><td><a href="https://en.wikipedia.org/wiki/ف">ف</a></td><td>1601</td><td>Pe (letter)</td></tr>
 <tr><td>q+</td><td><a href="https://en.wikipedia.org/wiki/ق">ق</a></td><td>1602</td><td>Qoph</td></tr>
 <tr><td>k+</td><td><a href="https://en.wikipedia.org/wiki/ك">ك</a></td><td>1603</td><td>Kaph</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>l+</td><td><a href="https://en.wikipedia.org/wiki/ل">ل</a></td><td>1604</td><td>Lamedh</td></tr>
 <tr><td>m+</td><td><a href="https://en.wikipedia.org/wiki/م">م</a></td><td>1605</td><td>Mem</td></tr>
 <tr><td>n+</td><td><a href="https://en.wikipedia.org/wiki/ن">ن</a></td><td>1606</td><td>Nun (letter)</td></tr>
@@ -721,6 +856,10 @@ color:white!important;
 <tr><td>:+</td><td><a href="https://en.wikipedia.org/wiki/ ً"> ً</a></td><td>1611</td><td>Nunation</td></tr>
 <tr><td>"+</td><td><a href="https://en.wikipedia.org/wiki/ ٌ"> ٌ</a></td><td>1612</td><td>Nunation</td></tr>
 <tr><td>=+</td><td><a href="https://en.wikipedia.org/wiki/ ٍ"> ٍ</a></td><td>1613</td><td>Nunation</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>/+</td><td><a href="https://en.wikipedia.org/wiki/ َ"> َ</a></td><td>1614</td><td>Arabic diacritics</td></tr>
 <tr><td>'+</td><td><a href="https://en.wikipedia.org/wiki/ ُ"> ُ</a></td><td>1615</td><td>Arabic diacritics</td></tr>
 <tr><td>1+</td><td><a href="https://en.wikipedia.org/wiki/ ِ"> ِ</a></td><td>1616</td><td>Arabic diacritics</td></tr>
@@ -731,6 +870,10 @@ color:white!important;
 <tr><td>v+</td><td><a href="https://en.wikipedia.org/wiki/ڤ">ڤ</a></td><td>1700</td><td>Ve (Arabic letter)</td></tr>
 <tr><td>gf</td><td><a href="https://en.wikipedia.org/wiki/گ">گ</a></td><td>1711</td><td>Gaf</td></tr>
 <tr><td>0a</td><td><a href="https://en.wikipedia.org/wiki/۰">۰</a></td><td>1776</td><td>0 (number)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>1a</td><td><a href="https://en.wikipedia.org/wiki/۱">۱</a></td><td>1777</td><td>1 (number)</td></tr>
 <tr><td>2a</td><td><a href="https://en.wikipedia.org/wiki/۲">۲</a></td><td>1778</td><td>2 (number)</td></tr>
 <tr><td>3a</td><td><a href="https://en.wikipedia.org/wiki/۳">۳</a></td><td>1779</td><td>3 (number)</td></tr>
@@ -741,6 +884,10 @@ color:white!important;
 <tr><td>8a</td><td><a href="https://en.wikipedia.org/wiki/۸">۸</a></td><td>1784</td><td>8 (number)</td></tr>
 <tr><td>9a</td><td><a href="https://en.wikipedia.org/wiki/۹">۹</a></td><td>1785</td><td>9 (number)</td></tr>
 <tr><td>B.</td><td><a href="https://en.wikipedia.org/wiki/Ḃ">Ḃ</a></td><td>7682</td><td>Dot (diacritic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>b.</td><td><a href="https://en.wikipedia.org/wiki/ḃ">ḃ</a></td><td>7683</td><td>Dot (diacritic)</td></tr>
 <tr><td>B_</td><td><a href="https://en.wikipedia.org/wiki/Ḇ">Ḇ</a></td><td>7686</td><td>Macron below</td></tr>
 <tr><td>b_</td><td><a href="https://en.wikipedia.org/wiki/ḇ">ḇ</a></td><td>7687</td><td>Macron below</td></tr>
@@ -751,6 +898,10 @@ color:white!important;
 <tr><td>D,</td><td><a href="https://en.wikipedia.org/wiki/Ḑ">Ḑ</a></td><td>7696</td><td>Ḑ</td></tr>
 <tr><td>d,</td><td><a href="https://en.wikipedia.org/wiki/ḑ">ḑ</a></td><td>7697</td><td>Ḑ</td></tr>
 <tr><td>F.</td><td><a href="https://en.wikipedia.org/wiki/Ḟ">Ḟ</a></td><td>7710</td><td>Dot (diacritic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>f.</td><td><a href="https://en.wikipedia.org/wiki/ḟ">ḟ</a></td><td>7711</td><td>Dot (diacritic)</td></tr>
 <tr><td>G-</td><td><a href="https://en.wikipedia.org/wiki/Ḡ">Ḡ</a></td><td>7712</td><td>Macron</td></tr>
 <tr><td>g-</td><td><a href="https://en.wikipedia.org/wiki/ḡ">ḡ</a></td><td>7713</td><td>Macron</td></tr>
@@ -761,6 +912,10 @@ color:white!important;
 <tr><td>H,</td><td><a href="https://en.wikipedia.org/wiki/Ḩ">Ḩ</a></td><td>7720</td><td>Cedilla</td></tr>
 <tr><td>h,</td><td><a href="https://en.wikipedia.org/wiki/ḩ">ḩ</a></td><td>7721</td><td>Cedilla</td></tr>
 <tr><td>K'</td><td><a href="https://en.wikipedia.org/wiki/Ḱ">Ḱ</a></td><td>7728</td><td>Ḱ</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>k'</td><td><a href="https://en.wikipedia.org/wiki/ḱ">ḱ</a></td><td>7729</td><td>Ḱ</td></tr>
 <tr><td>K_</td><td><a href="https://en.wikipedia.org/wiki/Ḵ">Ḵ</a></td><td>7732</td><td>Macron below</td></tr>
 <tr><td>k_</td><td><a href="https://en.wikipedia.org/wiki/ḵ">ḵ</a></td><td>7733</td><td>Macron below</td></tr>
@@ -771,6 +926,10 @@ color:white!important;
 <tr><td>M.</td><td><a href="https://en.wikipedia.org/wiki/Ṁ">Ṁ</a></td><td>7744</td><td>Dot (diacritic)</td></tr>
 <tr><td>m.</td><td><a href="https://en.wikipedia.org/wiki/ṁ">ṁ</a></td><td>7745</td><td>Dot (diacritic)</td></tr>
 <tr><td>N.</td><td><a href="https://en.wikipedia.org/wiki/Ṅ">Ṅ</a></td><td>7748</td><td>Ṅ</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>n.</td><td><a href="https://en.wikipedia.org/wiki/ṅ">ṅ</a></td><td>7749</td><td>Ṅ</td></tr>
 <tr><td>N_</td><td><a href="https://en.wikipedia.org/wiki/Ṉ">Ṉ</a></td><td>7752</td><td>Macron below</td></tr>
 <tr><td>n_</td><td><a href="https://en.wikipedia.org/wiki/ṉ">ṉ</a></td><td>7753</td><td>Macron below</td></tr>
@@ -781,6 +940,10 @@ color:white!important;
 <tr><td>R.</td><td><a href="https://en.wikipedia.org/wiki/Ṙ">Ṙ</a></td><td>7768</td><td>Dot (diacritic)</td></tr>
 <tr><td>r.</td><td><a href="https://en.wikipedia.org/wiki/ṙ">ṙ</a></td><td>7769</td><td>Dot (diacritic)</td></tr>
 <tr><td>R_</td><td><a href="https://en.wikipedia.org/wiki/Ṟ">Ṟ</a></td><td>7774</td><td>Macron below</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>r_</td><td><a href="https://en.wikipedia.org/wiki/ṟ">ṟ</a></td><td>7775</td><td>Macron below</td></tr>
 <tr><td>S.</td><td><a href="https://en.wikipedia.org/wiki/Ṡ">Ṡ</a></td><td>7776</td><td>Ṡ</td></tr>
 <tr><td>s.</td><td><a href="https://en.wikipedia.org/wiki/ṡ">ṡ</a></td><td>7777</td><td>Ṡ</td></tr>
@@ -791,6 +954,10 @@ color:white!important;
 <tr><td>V?</td><td><a href="https://en.wikipedia.org/wiki/Ṽ">Ṽ</a></td><td>7804</td><td>Tilde</td></tr>
 <tr><td>v?</td><td><a href="https://en.wikipedia.org/wiki/ṽ">ṽ</a></td><td>7805</td><td>Tilde</td></tr>
 <tr><td>W!</td><td><a href="https://en.wikipedia.org/wiki/Ẁ">Ẁ</a></td><td>7808</td><td>Grave accent</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>w!</td><td><a href="https://en.wikipedia.org/wiki/ẁ">ẁ</a></td><td>7809</td><td>Grave accent</td></tr>
 <tr><td>W'</td><td><a href="https://en.wikipedia.org/wiki/Ẃ">Ẃ</a></td><td>7810</td><td>Acute accent</td></tr>
 <tr><td>w'</td><td><a href="https://en.wikipedia.org/wiki/ẃ">ẃ</a></td><td>7811</td><td>Acute accent</td></tr>
@@ -801,6 +968,10 @@ color:white!important;
 <tr><td>X.</td><td><a href="https://en.wikipedia.org/wiki/Ẋ">Ẋ</a></td><td>7818</td><td>Ẋ</td></tr>
 <tr><td>x.</td><td><a href="https://en.wikipedia.org/wiki/ẋ">ẋ</a></td><td>7819</td><td>Ẋ</td></tr>
 <tr><td>X:</td><td><a href="https://en.wikipedia.org/wiki/Ẍ">Ẍ</a></td><td>7820</td><td>Diaeresis (diacritic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>x:</td><td><a href="https://en.wikipedia.org/wiki/ẍ">ẍ</a></td><td>7821</td><td>Diaeresis (diacritic)</td></tr>
 <tr><td>Y.</td><td><a href="https://en.wikipedia.org/wiki/Ẏ">Ẏ</a></td><td>7822</td><td>Dot (diacritic)</td></tr>
 <tr><td>y.</td><td><a href="https://en.wikipedia.org/wiki/ẏ">ẏ</a></td><td>7823</td><td>Dot (diacritic)</td></tr>
@@ -811,6 +982,10 @@ color:white!important;
 <tr><td>h_</td><td><a href="https://en.wikipedia.org/wiki/ẖ">ẖ</a></td><td>7830</td><td>Macron below</td></tr>
 <tr><td>t:</td><td><a href="https://en.wikipedia.org/wiki/ẗ">ẗ</a></td><td>7831</td><td>ẗ</td></tr>
 <tr><td>w0</td><td><a href="https://en.wikipedia.org/wiki/ẘ">ẘ</a></td><td>7832</td><td>Ring (diacritic)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>y0</td><td><a href="https://en.wikipedia.org/wiki/ẙ">ẙ</a></td><td>7833</td><td>Ring (diacritic)</td></tr>
 <tr><td>A2</td><td><a href="https://en.wikipedia.org/wiki/Ả">Ả</a></td><td>7842</td><td>Hook above</td></tr>
 <tr><td>a2</td><td><a href="https://en.wikipedia.org/wiki/ả">ả</a></td><td>7843</td><td>Hook above</td></tr>
@@ -821,6 +996,10 @@ color:white!important;
 <tr><td>I2</td><td><a href="https://en.wikipedia.org/wiki/Ỉ">Ỉ</a></td><td>7880</td><td>Hook above</td></tr>
 <tr><td>i2</td><td><a href="https://en.wikipedia.org/wiki/ỉ">ỉ</a></td><td>7881</td><td>Hook above</td></tr>
 <tr><td>O2</td><td><a href="https://en.wikipedia.org/wiki/Ỏ">Ỏ</a></td><td>7886</td><td>Hook above</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>o2</td><td><a href="https://en.wikipedia.org/wiki/ỏ">ỏ</a></td><td>7887</td><td>Hook above</td></tr>
 <tr><td>U2</td><td><a href="https://en.wikipedia.org/wiki/Ủ">Ủ</a></td><td>7910</td><td>Hook above</td></tr>
 <tr><td>u2</td><td><a href="https://en.wikipedia.org/wiki/ủ">ủ</a></td><td>7911</td><td>Hook above</td></tr>
@@ -831,6 +1010,10 @@ color:white!important;
 <tr><td>Y?</td><td><a href="https://en.wikipedia.org/wiki/Ỹ">Ỹ</a></td><td>7928</td><td>Tilde</td></tr>
 <tr><td>y?</td><td><a href="https://en.wikipedia.org/wiki/ỹ">ỹ</a></td><td>7929</td><td>Tilde</td></tr>
 <tr><td>;'</td><td><a href="https://en.wikipedia.org/wiki/ἀ">ἀ</a></td><td>7936</td><td>Greek diacritics</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>,'</td><td><a href="https://en.wikipedia.org/wiki/ἁ">ἁ</a></td><td>7937</td><td>Greek diacritics</td></tr>
 <tr><td>;!</td><td><a href="https://en.wikipedia.org/wiki/ἂ">ἂ</a></td><td>7938</td><td>Greek diacritics</td></tr>
 <tr><td>,!</td><td><a href="https://en.wikipedia.org/wiki/ἃ">ἃ</a></td><td>7939</td><td>Greek diacritics</td></tr>
@@ -841,6 +1024,10 @@ color:white!important;
 <tr><td>1N</td><td><a href="https://en.wikipedia.org/wiki/ "> </a></td><td>8194</td></tr>
 <tr><td>1M</td><td><a href="https://en.wikipedia.org/wiki/ "> </a></td><td>8195</td></tr>
 <tr><td>3M</td><td><a href="https://en.wikipedia.org/wiki/ "> </a></td><td>8196</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>4M</td><td><a href="https://en.wikipedia.org/wiki/ "> </a></td><td>8197</td></tr>
 <tr><td>6M</td><td><a href="https://en.wikipedia.org/wiki/ "> </a></td><td>8198</td></tr>
 <tr><td>1T</td><td><a href="https://en.wikipedia.org/wiki/ "> </a></td><td>8201</td></tr>
@@ -851,6 +1038,10 @@ color:white!important;
 <tr><td>-3</td><td><a href="https://en.wikipedia.org/wiki/―">―</a></td><td>8213</td><td>Dash</td></tr>
 <tr><td>!2</td><td><a href="https://en.wikipedia.org/wiki/‖">‖</a></td><td>8214</td><td>Vertical bar</td></tr>
 <tr><td>=2</td><td><a href="https://en.wikipedia.org/wiki/‗">‗</a></td><td>8215</td><td>Underscore</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>'6</td><td><a href="https://en.wikipedia.org/wiki/‘">‘</a></td><td>8216</td><td>Quotation mark</td></tr>
 <tr><td>'9</td><td><a href="https://en.wikipedia.org/wiki/’">’</a></td><td>8217</td><td>Quotation mark</td></tr>
 <tr><td>.9</td><td><a href="https://en.wikipedia.org/wiki/‚">‚</a></td><td>8218</td><td>Quotation mark</td></tr>
@@ -861,6 +1052,10 @@ color:white!important;
 <tr><td>9"</td><td><a href="https://en.wikipedia.org/wiki/‟">‟</a></td><td>8223</td><td>Quotation mark</td></tr>
 <tr><td>/-</td><td><a href="https://en.wikipedia.org/wiki/†">†</a></td><td>8224</td><td>Dagger (typography)</td></tr>
 <tr><td>/=</td><td><a href="https://en.wikipedia.org/wiki/‡">‡</a></td><td>8225</td><td>Dagger (typography)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>..</td><td><a href="https://en.wikipedia.org/wiki/‥">‥</a></td><td>8229</td><td>Leader (typography)</td></tr>
 <tr><td>%0</td><td><a href="https://en.wikipedia.org/wiki/‰">‰</a></td><td>8240</td><td>Per mille</td></tr>
 <tr><td>1'</td><td><a href="https://en.wikipedia.org/wiki/′">′</a></td><td>8242</td><td>Prime (symbol)</td></tr>
@@ -871,6 +1066,10 @@ color:white!important;
 <tr><td>3"</td><td><a href="https://en.wikipedia.org/wiki/‷">‷</a></td><td>8247</td><td>Prime (symbol)</td></tr>
 <tr><td>Ca</td><td><a href="https://en.wikipedia.org/wiki/‸">‸</a></td><td>8248</td><td>Caret</td></tr>
 <tr><td><1</td><td><a href="https://en.wikipedia.org/wiki/‹">‹</a></td><td>8249</td><td>Guillemet</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>>1</td><td><a href="https://en.wikipedia.org/wiki/›">›</a></td><td>8250</td><td>Guillemet</td></tr>
 <tr><td>:X</td><td><a href="https://en.wikipedia.org/wiki/※">※</a></td><td>8251</td><td>Japanese typographic symbols</td></tr>
 <tr><td>'-</td><td><a href="https://en.wikipedia.org/wiki/‾">‾</a></td><td>8254</td><td>Overline</td></tr>
@@ -881,6 +1080,10 @@ color:white!important;
 <tr><td>6S</td><td><a href="https://en.wikipedia.org/wiki/⁶">⁶</a></td><td>8310</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>7S</td><td><a href="https://en.wikipedia.org/wiki/⁷">⁷</a></td><td>8311</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>8S</td><td><a href="https://en.wikipedia.org/wiki/⁸">⁸</a></td><td>8312</td><td>Unicode subscripts and superscripts</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>9S</td><td><a href="https://en.wikipedia.org/wiki/⁹">⁹</a></td><td>8313</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>+S</td><td><a href="https://en.wikipedia.org/wiki/⁺">⁺</a></td><td>8314</td><td>Plus and minus signs</td></tr>
 <tr><td>-S</td><td><a href="https://en.wikipedia.org/wiki/⁻">⁻</a></td><td>8315</td><td>Plus and minus signs</td></tr>
@@ -891,6 +1094,10 @@ color:white!important;
 <tr><td>0s</td><td><a href="https://en.wikipedia.org/wiki/₀">₀</a></td><td>8320</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>1s</td><td><a href="https://en.wikipedia.org/wiki/₁">₁</a></td><td>8321</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>2s</td><td><a href="https://en.wikipedia.org/wiki/₂">₂</a></td><td>8322</td><td>Unicode subscripts and superscripts</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>3s</td><td><a href="https://en.wikipedia.org/wiki/₃">₃</a></td><td>8323</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>4s</td><td><a href="https://en.wikipedia.org/wiki/₄">₄</a></td><td>8324</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>5s</td><td><a href="https://en.wikipedia.org/wiki/₅">₅</a></td><td>8325</td><td>Unicode subscripts and superscripts</td></tr>
@@ -901,6 +1108,10 @@ color:white!important;
 <tr><td>+s</td><td><a href="https://en.wikipedia.org/wiki/₊">₊</a></td><td>8330</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>-s</td><td><a href="https://en.wikipedia.org/wiki/₋">₋</a></td><td>8331</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>=s</td><td><a href="https://en.wikipedia.org/wiki/₌">₌</a></td><td>8332</td><td>Unicode subscripts and superscripts</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>(s</td><td><a href="https://en.wikipedia.org/wiki/₍">₍</a></td><td>8333</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>)s</td><td><a href="https://en.wikipedia.org/wiki/₎">₎</a></td><td>8334</td><td>Unicode subscripts and superscripts</td></tr>
 <tr><td>Li</td><td><a href="https://en.wikipedia.org/wiki/₤">₤</a></td><td>8356</td><td>Pound sign</td></tr>
@@ -911,6 +1122,10 @@ color:white!important;
 <tr><td>oC</td><td><a href="https://en.wikipedia.org/wiki/℃">℃</a></td><td>8451</td><td>Celsius</td></tr>
 <tr><td>co</td><td><a href="https://en.wikipedia.org/wiki/℅">℅</a></td><td>8453</td><td>Care of</td></tr>
 <tr><td>oF</td><td><a href="https://en.wikipedia.org/wiki/℉">℉</a></td><td>8457</td><td>Fahrenheit</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>N0</td><td><a href="https://en.wikipedia.org/wiki/№">№</a></td><td>8470</td><td>Numero sign</td></tr>
 <tr><td>PO</td><td><a href="https://en.wikipedia.org/wiki/℗">℗</a></td><td>8471</td><td>Sound recording copyright symbol</td></tr>
 <tr><td>Rx</td><td><a href="https://en.wikipedia.org/wiki/℞">℞</a></td><td>8478</td><td>Medical prescription</td></tr>
@@ -921,6 +1136,10 @@ color:white!important;
 <tr><td>13</td><td><a href="https://en.wikipedia.org/wiki/⅓">⅓</a></td><td>8531</td><td>1/3</td></tr>
 <tr><td>23</td><td><a href="https://en.wikipedia.org/wiki/⅔">⅔</a></td><td>8532</td><td>Fraction (mathematics)</td></tr>
 <tr><td>15</td><td><a href="https://en.wikipedia.org/wiki/⅕">⅕</a></td><td>8533</td><td>Fifth</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>25</td><td><a href="https://en.wikipedia.org/wiki/⅖">⅖</a></td><td>8534</td><td>Fraction (mathematics)</td></tr>
 <tr><td>35</td><td><a href="https://en.wikipedia.org/wiki/⅗">⅗</a></td><td>8535</td><td>Fraction (mathematics)</td></tr>
 <tr><td>45</td><td><a href="https://en.wikipedia.org/wiki/⅘">⅘</a></td><td>8536</td><td>Fraction (mathematics)</td></tr>
@@ -931,6 +1150,10 @@ color:white!important;
 <tr><td>58</td><td><a href="https://en.wikipedia.org/wiki/⅝">⅝</a></td><td>8541</td><td>Fraction (mathematics)</td></tr>
 <tr><td>78</td><td><a href="https://en.wikipedia.org/wiki/⅞">⅞</a></td><td>8542</td><td>Fraction (mathematics)</td></tr>
 <tr><td>1R</td><td><a href="https://en.wikipedia.org/wiki/Ⅰ">Ⅰ</a></td><td>8544</td><td>1 (number)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>2R</td><td><a href="https://en.wikipedia.org/wiki/Ⅱ">Ⅱ</a></td><td>8545</td><td>2 (number)</td></tr>
 <tr><td>3R</td><td><a href="https://en.wikipedia.org/wiki/Ⅲ">Ⅲ</a></td><td>8546</td><td>3 (number)</td></tr>
 <tr><td>4R</td><td><a href="https://en.wikipedia.org/wiki/Ⅳ">Ⅳ</a></td><td>8547</td><td>4 (number)</td></tr>
@@ -941,6 +1164,10 @@ color:white!important;
 <tr><td>9R</td><td><a href="https://en.wikipedia.org/wiki/Ⅸ">Ⅸ</a></td><td>8552</td><td>9 (number)</td></tr>
 <tr><td>aR</td><td><a href="https://en.wikipedia.org/wiki/Ⅹ">Ⅹ</a></td><td>8553</td><td>10 (number)</td></tr>
 <tr><td>bR</td><td><a href="https://en.wikipedia.org/wiki/Ⅺ">Ⅺ</a></td><td>8554</td><td>11 (number)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>cR</td><td><a href="https://en.wikipedia.org/wiki/Ⅻ">Ⅻ</a></td><td>8555</td><td>12 (number)</td></tr>
 <tr><td>1r</td><td><a href="https://en.wikipedia.org/wiki/ⅰ">ⅰ</a></td><td>8560</td><td>1 (number)</td></tr>
 <tr><td>2r</td><td><a href="https://en.wikipedia.org/wiki/ⅱ">ⅱ</a></td><td>8561</td><td>2 (number)</td></tr>
@@ -951,6 +1178,10 @@ color:white!important;
 <tr><td>7r</td><td><a href="https://en.wikipedia.org/wiki/ⅶ">ⅶ</a></td><td>8566</td><td>7 (number)</td></tr>
 <tr><td>8r</td><td><a href="https://en.wikipedia.org/wiki/ⅷ">ⅷ</a></td><td>8567</td><td>8 (number)</td></tr>
 <tr><td>9r</td><td><a href="https://en.wikipedia.org/wiki/ⅸ">ⅸ</a></td><td>8568</td><td>9 (number)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>ar</td><td><a href="https://en.wikipedia.org/wiki/ⅹ">ⅹ</a></td><td>8569</td><td>10 (number)</td></tr>
 <tr><td>br</td><td><a href="https://en.wikipedia.org/wiki/ⅺ">ⅺ</a></td><td>8570</td><td>11 (number)</td></tr>
 <tr><td>cr</td><td><a href="https://en.wikipedia.org/wiki/ⅻ">ⅻ</a></td><td>8571</td><td>12 (number)</td></tr>
@@ -961,6 +1192,10 @@ color:white!important;
 <tr><td><></td><td><a href="https://en.wikipedia.org/wiki/↔">↔</a></td><td>8596</td><td>If and only if</td></tr>
 <tr><td>UD</td><td><a href="https://en.wikipedia.org/wiki/↕">↕</a></td><td>8597</td><td>Vertical</td></tr>
 <tr><td><=</td><td><a href="https://en.wikipedia.org/wiki/⇐">⇐</a></td><td>8656</td><td>Arrow (symbol)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>=></td><td><a href="https://en.wikipedia.org/wiki/⇒">⇒</a></td><td>8658</td><td>Arrow (symbol)</td></tr>
 <tr><td>==</td><td><a href="https://en.wikipedia.org/wiki/⇔">⇔</a></td><td>8660</td><td>If and only if</td></tr>
 <tr><td>FA</td><td><a href="https://en.wikipedia.org/wiki/∀">∀</a></td><td>8704</td><td>Universal quantification</td></tr>
@@ -971,6 +1206,10 @@ color:white!important;
 <tr><td>NB</td><td><a href="https://en.wikipedia.org/wiki/∇">∇</a></td><td>8711</td><td>Nabla symbol</td></tr>
 <tr><td>(-</td><td><a href="https://en.wikipedia.org/wiki/∈">∈</a></td><td>8712</td><td>Element (mathematics)</td></tr>
 <tr><td>-)</td><td><a href="https://en.wikipedia.org/wiki/∋">∋</a></td><td>8715</td><td>Element (mathematics)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>*P</td><td><a href="https://en.wikipedia.org/wiki/∏">∏</a></td><td>8719</td><td>Multiplication</td></tr>
 <tr><td>+Z</td><td><a href="https://en.wikipedia.org/wiki/∑">∑</a></td><td>8721</td><td>Summation</td></tr>
 <tr><td>-2</td><td><a href="https://en.wikipedia.org/wiki/−">−</a></td><td>8722</td><td>Plus and minus signs</td></tr>
@@ -981,6 +1220,10 @@ color:white!important;
 <tr><td>RT</td><td><a href="https://en.wikipedia.org/wiki/√">√</a></td><td>8730</td><td>Square root</td></tr>
 <tr><td>0(</td><td><a href="https://en.wikipedia.org/wiki/∝">∝</a></td><td>8733</td><td>Proportionality (mathematics)</td></tr>
 <tr><td>00</td><td><a href="https://en.wikipedia.org/wiki/∞">∞</a></td><td>8734</td><td>Infinity symbol</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>-L</td><td><a href="https://en.wikipedia.org/wiki/∟">∟</a></td><td>8735</td><td>Right angle</td></tr>
 <tr><td>-V</td><td><a href="https://en.wikipedia.org/wiki/∠">∠</a></td><td>8736</td><td>Angle</td></tr>
 <tr><td>PP</td><td><a href="https://en.wikipedia.org/wiki/∥">∥</a></td><td>8741</td><td>Parallel (geometry)</td></tr>
@@ -991,6 +1234,10 @@ color:white!important;
 <tr><td>In</td><td><a href="https://en.wikipedia.org/wiki/∫">∫</a></td><td>8747</td><td>Integral symbol</td></tr>
 <tr><td>DI</td><td><a href="https://en.wikipedia.org/wiki/∬">∬</a></td><td>8748</td><td>Multiple integral</td></tr>
 <tr><td>Io</td><td><a href="https://en.wikipedia.org/wiki/∮">∮</a></td><td>8750</td><td>Line integral</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>.:</td><td><a href="https://en.wikipedia.org/wiki/∴">∴</a></td><td>8756</td><td>Therefore sign</td></tr>
 <tr><td>:.</td><td><a href="https://en.wikipedia.org/wiki/∵">∵</a></td><td>8757</td><td>Therefore sign</td></tr>
 <tr><td>:R</td><td><a href="https://en.wikipedia.org/wiki/∶">∶</a></td><td>8758</td><td>Ratio</td></tr>
@@ -1001,6 +1248,10 @@ color:white!important;
 <tr><td>?=</td><td><a href="https://en.wikipedia.org/wiki/≅">≅</a></td><td>8773</td><td>≅</td></tr>
 <tr><td>?2</td><td><a href="https://en.wikipedia.org/wiki/≈">≈</a></td><td>8776</td><td>Approximation</td></tr>
 <tr><td>=?</td><td><a href="https://en.wikipedia.org/wiki/≌">≌</a></td><td>8780</td><td>Equals sign</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>HI</td><td><a href="https://en.wikipedia.org/wiki/≓">≓</a></td><td>8787</td><td>Approximation</td></tr>
 <tr><td>!=</td><td><a href="https://en.wikipedia.org/wiki/≠">≠</a></td><td>8800</td><td>Equals sign</td></tr>
 <tr><td>=3</td><td><a href="https://en.wikipedia.org/wiki/≡">≡</a></td><td>8801</td><td>≡</td></tr>
@@ -1011,6 +1262,10 @@ color:white!important;
 <tr><td>!<</td><td><a href="https://en.wikipedia.org/wiki/≮">≮</a></td><td>8814</td><td>Inequality (mathematics)</td></tr>
 <tr><td>!></td><td><a href="https://en.wikipedia.org/wiki/≯">≯</a></td><td>8815</td><td>Inequality (mathematics)</td></tr>
 <tr><td>(C</td><td><a href="https://en.wikipedia.org/wiki/⊂">⊂</a></td><td>8834</td><td>Subset</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>)C</td><td><a href="https://en.wikipedia.org/wiki/⊃">⊃</a></td><td>8835</td><td>Subset</td></tr>
 <tr><td>(_</td><td><a href="https://en.wikipedia.org/wiki/⊆">⊆</a></td><td>8838</td><td>Subset</td></tr>
 <tr><td>)_</td><td><a href="https://en.wikipedia.org/wiki/⊇">⊇</a></td><td>8839</td><td>Subset</td></tr>
@@ -1021,6 +1276,10 @@ color:white!important;
 <tr><td>:3</td><td><a href="https://en.wikipedia.org/wiki/⋮">⋮</a></td><td>8942</td><td>Ellipsis</td></tr>
 <tr><td>.3</td><td><a href="https://en.wikipedia.org/wiki/⋯">⋯</a></td><td>8943</td><td>Ellipsis</td></tr>
 <tr><td>Eh</td><td><a href="https://en.wikipedia.org/wiki/⌂">⌂</a></td><td>8962</td><td>Miscellaneous Technical</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td><7</td><td><a href="https://en.wikipedia.org/wiki/⌈">⌈</a></td><td>8968</td><td>Floor and ceiling functions</td></tr>
 <tr><td>>7</td><td><a href="https://en.wikipedia.org/wiki/⌉">⌉</a></td><td>8969</td><td>Floor and ceiling functions</td></tr>
 <tr><td>7<</td><td><a href="https://en.wikipedia.org/wiki/⌊">⌊</a></td><td>8970</td><td>Floor and ceiling functions</td></tr>
@@ -1031,6 +1290,10 @@ color:white!important;
 <tr><td>Iu</td><td><a href="https://en.wikipedia.org/wiki/⌠">⌠</a></td><td>8992</td><td>Integral symbol</td></tr>
 <tr><td>Il</td><td><a href="https://en.wikipedia.org/wiki/⌡">⌡</a></td><td>8993</td><td>Integral symbol</td></tr>
 <tr><td></</td><td><a href="https://en.wikipedia.org/wiki/〈">〈</a></td><td>9001</td><td>Bracket</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>/></td><td><a href="https://en.wikipedia.org/wiki/〉">〉</a></td><td>9002</td><td>Bracket</td></tr>
 <tr><td>Vs</td><td><a href="https://en.wikipedia.org/wiki/␣">␣</a></td><td>9251</td><td>Whitespace character</td></tr>
 <tr><td>1h</td><td><a href="https://en.wikipedia.org/wiki/⑀">⑀</a></td><td>9280</td></tr>
@@ -1041,6 +1304,10 @@ color:white!important;
 <tr><td>2j</td><td><a href="https://en.wikipedia.org/wiki/⑇">⑇</a></td><td>9287</td><td>Magnetic ink character recognition</td></tr>
 <tr><td>3j</td><td><a href="https://en.wikipedia.org/wiki/⑈">⑈</a></td><td>9288</td><td>Magnetic ink character recognition</td></tr>
 <tr><td>4j</td><td><a href="https://en.wikipedia.org/wiki/⑉">⑉</a></td><td>9289</td><td>Magnetic ink character recognition</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>1.</td><td><a href="https://en.wikipedia.org/wiki/⒈">⒈</a></td><td>9352</td><td>1 (number)</td></tr>
 <tr><td>2.</td><td><a href="https://en.wikipedia.org/wiki/⒉">⒉</a></td><td>9353</td><td>2 (number)</td></tr>
 <tr><td>3.</td><td><a href="https://en.wikipedia.org/wiki/⒊">⒊</a></td><td>9354</td><td>3 (number)</td></tr>
@@ -1051,6 +1318,10 @@ color:white!important;
 <tr><td>8.</td><td><a href="https://en.wikipedia.org/wiki/⒏">⒏</a></td><td>9359</td><td>8 (number)</td></tr>
 <tr><td>9.</td><td><a href="https://en.wikipedia.org/wiki/⒐">⒐</a></td><td>9360</td><td>9 (number)</td></tr>
 <tr><td>hh</td><td><a href="https://en.wikipedia.org/wiki/─">─</a></td><td>9472</td><td>Box-drawing character</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>HH</td><td><a href="https://en.wikipedia.org/wiki/━">━</a></td><td>9473</td><td>Box-drawing character</td></tr>
 <tr><td>vv</td><td><a href="https://en.wikipedia.org/wiki/│">│</a></td><td>9474</td><td>Box-drawing character</td></tr>
 <tr><td>VV</td><td><a href="https://en.wikipedia.org/wiki/┃">┃</a></td><td>9475</td><td>Box-drawing character</td></tr>
@@ -1061,6 +1332,10 @@ color:white!important;
 <tr><td>4-</td><td><a href="https://en.wikipedia.org/wiki/┈">┈</a></td><td>9480</td><td>Box-drawing character</td></tr>
 <tr><td>4_</td><td><a href="https://en.wikipedia.org/wiki/┉">┉</a></td><td>9481</td><td>Box-drawing character</td></tr>
 <tr><td>4!</td><td><a href="https://en.wikipedia.org/wiki/┊">┊</a></td><td>9482</td><td>Box-drawing character</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>4/</td><td><a href="https://en.wikipedia.org/wiki/┋">┋</a></td><td>9483</td><td>Box-drawing character</td></tr>
 <tr><td>dr</td><td><a href="https://en.wikipedia.org/wiki/┌">┌</a></td><td>9484</td><td>Box-drawing character</td></tr>
 <tr><td>dR</td><td><a href="https://en.wikipedia.org/wiki/┍">┍</a></td><td>9485</td><td>Box-drawing character</td></tr>
@@ -1071,6 +1346,10 @@ color:white!important;
 <tr><td>Dl</td><td><a href="https://en.wikipedia.org/wiki/┒">┒</a></td><td>9490</td><td>Box-drawing character</td></tr>
 <tr><td>LD</td><td><a href="https://en.wikipedia.org/wiki/┓">┓</a></td><td>9491</td><td>Box-drawing character</td></tr>
 <tr><td>ur</td><td><a href="https://en.wikipedia.org/wiki/└">└</a></td><td>9492</td><td>Box-drawing character</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>uR</td><td><a href="https://en.wikipedia.org/wiki/┕">┕</a></td><td>9493</td><td>Box-drawing character</td></tr>
 <tr><td>Ur</td><td><a href="https://en.wikipedia.org/wiki/┖">┖</a></td><td>9494</td><td>Box-drawing character</td></tr>
 <tr><td>UR</td><td><a href="https://en.wikipedia.org/wiki/┗">┗</a></td><td>9495</td><td>Box-drawing character</td></tr>
@@ -1081,6 +1360,10 @@ color:white!important;
 <tr><td>vr</td><td><a href="https://en.wikipedia.org/wiki/├">├</a></td><td>9500</td><td>Box-drawing character</td></tr>
 <tr><td>vR</td><td><a href="https://en.wikipedia.org/wiki/┝">┝</a></td><td>9501</td><td>Box-drawing character</td></tr>
 <tr><td>Vr</td><td><a href="https://en.wikipedia.org/wiki/┠">┠</a></td><td>9504</td><td>Box-drawing character</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>VR</td><td><a href="https://en.wikipedia.org/wiki/┣">┣</a></td><td>9507</td><td>Box-drawing character</td></tr>
 <tr><td>vl</td><td><a href="https://en.wikipedia.org/wiki/┤">┤</a></td><td>9508</td><td>Box-drawing character</td></tr>
 <tr><td>vL</td><td><a href="https://en.wikipedia.org/wiki/┥">┥</a></td><td>9509</td><td>Box-drawing character</td></tr>
@@ -1091,6 +1374,10 @@ color:white!important;
 <tr><td>Dh</td><td><a href="https://en.wikipedia.org/wiki/┰">┰</a></td><td>9520</td><td>Box-drawing character</td></tr>
 <tr><td>DH</td><td><a href="https://en.wikipedia.org/wiki/┳">┳</a></td><td>9523</td><td>Box-drawing character</td></tr>
 <tr><td>uh</td><td><a href="https://en.wikipedia.org/wiki/┴">┴</a></td><td>9524</td><td>Box-drawing character</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>uH</td><td><a href="https://en.wikipedia.org/wiki/┷">┷</a></td><td>9527</td><td>Box-drawing character</td></tr>
 <tr><td>Uh</td><td><a href="https://en.wikipedia.org/wiki/┸">┸</a></td><td>9528</td><td>Box-drawing character</td></tr>
 <tr><td>UH</td><td><a href="https://en.wikipedia.org/wiki/┻">┻</a></td><td>9531</td><td>Box-drawing character</td></tr>
@@ -1101,6 +1388,10 @@ color:white!important;
 <tr><td>FD</td><td><a href="https://en.wikipedia.org/wiki/╱">╱</a></td><td>9585</td><td>Box-drawing character</td></tr>
 <tr><td>BD</td><td><a href="https://en.wikipedia.org/wiki/╲">╲</a></td><td>9586</td><td>Box-drawing character</td></tr>
 <tr><td>TB</td><td><a href="https://en.wikipedia.org/wiki/▀">▀</a></td><td>9600</td><td>Block Elements</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>LB</td><td><a href="https://en.wikipedia.org/wiki/▄">▄</a></td><td>9604</td><td>Block Elements</td></tr>
 <tr><td>FB</td><td><a href="https://en.wikipedia.org/wiki/█">█</a></td><td>9608</td><td>Block Elements</td></tr>
 <tr><td>lB</td><td><a href="https://en.wikipedia.org/wiki/▌">▌</a></td><td>9612</td><td>Block Elements</td></tr>
@@ -1111,6 +1402,10 @@ color:white!important;
 <tr><td>fS</td><td><a href="https://en.wikipedia.org/wiki/■">■</a></td><td>9632</td><td>Geometric Shapes</td></tr>
 <tr><td>OS</td><td><a href="https://en.wikipedia.org/wiki/□">□</a></td><td>9633</td><td>Geometric Shapes</td></tr>
 <tr><td>RO</td><td><a href="https://en.wikipedia.org/wiki/▢">▢</a></td><td>9634</td><td>Geometric Shapes</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Rr</td><td><a href="https://en.wikipedia.org/wiki/▣">▣</a></td><td>9635</td><td>Geometric Shapes</td></tr>
 <tr><td>RF</td><td><a href="https://en.wikipedia.org/wiki/▤">▤</a></td><td>9636</td><td>Geometric Shapes</td></tr>
 <tr><td>RY</td><td><a href="https://en.wikipedia.org/wiki/▥">▥</a></td><td>9637</td><td>Geometric Shapes</td></tr>
@@ -1121,6 +1416,10 @@ color:white!important;
 <tr><td>sB</td><td><a href="https://en.wikipedia.org/wiki/▪">▪</a></td><td>9642</td><td>Square</td></tr>
 <tr><td>SR</td><td><a href="https://en.wikipedia.org/wiki/▬">▬</a></td><td>9644</td><td>Geometric Shapes</td></tr>
 <tr><td>Or</td><td><a href="https://en.wikipedia.org/wiki/▭">▭</a></td><td>9645</td><td>Geometric Shapes</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>UT</td><td><a href="https://en.wikipedia.org/wiki/▲">▲</a></td><td>9650</td><td>Geometric Shapes</td></tr>
 <tr><td>uT</td><td><a href="https://en.wikipedia.org/wiki/△">△</a></td><td>9651</td><td>Geometric Shapes</td></tr>
 <tr><td>PR</td><td><a href="https://en.wikipedia.org/wiki/▶">▶</a></td><td>9654</td><td>Media controls</td></tr>
@@ -1131,6 +1430,10 @@ color:white!important;
 <tr><td>Tl</td><td><a href="https://en.wikipedia.org/wiki/◁">◁</a></td><td>9665</td><td>Geometric Shapes</td></tr>
 <tr><td>Db</td><td><a href="https://en.wikipedia.org/wiki/◆">◆</a></td><td>9670</td><td>Geometric Shapes</td></tr>
 <tr><td>Dw</td><td><a href="https://en.wikipedia.org/wiki/◇">◇</a></td><td>9671</td><td>Geometric Shapes</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>LZ</td><td><a href="https://en.wikipedia.org/wiki/◊">◊</a></td><td>9674</td><td>Lozenge</td></tr>
 <tr><td>0m</td><td><a href="https://en.wikipedia.org/wiki/○">○</a></td><td>9675</td><td>Geometric Shapes</td></tr>
 <tr><td>0o</td><td><a href="https://en.wikipedia.org/wiki/◎">◎</a></td><td>9678</td><td>Bullseye (target)</td></tr>
@@ -1141,6 +1444,10 @@ color:white!important;
 <tr><td>Ic</td><td><a href="https://en.wikipedia.org/wiki/◙">◙</a></td><td>9689</td><td>Geometric Shapes</td></tr>
 <tr><td>Fd</td><td><a href="https://en.wikipedia.org/wiki/◢">◢</a></td><td>9698</td><td>Geometric Shapes</td></tr>
 <tr><td>Bd</td><td><a href="https://en.wikipedia.org/wiki/◣">◣</a></td><td>9699</td><td>Geometric Shapes</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>*2</td><td><a href="https://en.wikipedia.org/wiki/★">★</a></td><td>9733</td><td>Star (glyph)</td></tr>
 <tr><td>*1</td><td><a href="https://en.wikipedia.org/wiki/☆">☆</a></td><td>9734</td><td>Star (glyph)</td></tr>
 <tr><td><H</td><td><a href="https://en.wikipedia.org/wiki/☜">☜</a></td><td>9756</td><td>Index (typography)</td></tr>
@@ -1151,6 +1458,10 @@ color:white!important;
 <tr><td>Fm</td><td><a href="https://en.wikipedia.org/wiki/♀">♀</a></td><td>9792</td><td>Venus symbol</td></tr>
 <tr><td>Ml</td><td><a href="https://en.wikipedia.org/wiki/♂">♂</a></td><td>9794</td><td>Mars symbol</td></tr>
 <tr><td>cS</td><td><a href="https://en.wikipedia.org/wiki/♠">♠</a></td><td>9824</td><td>Suit (cards)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>cH</td><td><a href="https://en.wikipedia.org/wiki/♡">♡</a></td><td>9825</td><td>Suit (cards)</td></tr>
 <tr><td>cD</td><td><a href="https://en.wikipedia.org/wiki/♢">♢</a></td><td>9826</td><td>Suit (cards)</td></tr>
 <tr><td>cC</td><td><a href="https://en.wikipedia.org/wiki/♣">♣</a></td><td>9827</td><td>Suit (cards)</td></tr>
@@ -1161,6 +1472,10 @@ color:white!important;
 <tr><td>Mx</td><td><a href="https://en.wikipedia.org/wiki/♮">♮</a></td><td>9838</td><td>Natural (music)</td></tr>
 <tr><td>MX</td><td><a href="https://en.wikipedia.org/wiki/♯">♯</a></td><td>9839</td><td>Sharp (music)</td></tr>
 <tr><td>OK</td><td><a href="https://en.wikipedia.org/wiki/✓">✓</a></td><td>10003</td><td>Check mark</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>XX</td><td><a href="https://en.wikipedia.org/wiki/✗">✗</a></td><td>10007</td><td>X mark</td></tr>
 <tr><td>-X</td><td><a href="https://en.wikipedia.org/wiki/✠">✠</a></td><td>10016</td><td>Cross pattée</td></tr>
 <tr><td>IS</td><td><a href="https://en.wikipedia.org/wiki/　">　</a></td><td>12288</td></tr>
@@ -1171,6 +1486,10 @@ color:white!important;
 <tr><td>*_</td><td><a href="https://en.wikipedia.org/wiki/々">々</a></td><td>12293</td><td>Iteration mark</td></tr>
 <tr><td>;_</td><td><a href="https://en.wikipedia.org/wiki/〆">〆</a></td><td>12294</td><td>Japanese typographic symbols</td></tr>
 <tr><td>0_</td><td><a href="https://en.wikipedia.org/wiki/〇">〇</a></td><td>12295</td><td>0 (number)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td><+</td><td><a href="https://en.wikipedia.org/wiki/《">《</a></td><td>12298</td><td>Bracket</td></tr>
 <tr><td>>+</td><td><a href="https://en.wikipedia.org/wiki/》">》</a></td><td>12299</td><td>Bracket</td></tr>
 <tr><td><'</td><td><a href="https://en.wikipedia.org/wiki/「">「</a></td><td>12300</td><td>Quotation mark</td></tr>
@@ -1181,6 +1500,10 @@ color:white!important;
 <tr><td>)"</td><td><a href="https://en.wikipedia.org/wiki/】">】</a></td><td>12305</td><td>Bracket</td></tr>
 <tr><td>=T</td><td><a href="https://en.wikipedia.org/wiki/〒">〒</a></td><td>12306</td><td>Japanese postal mark</td></tr>
 <tr><td>=_</td><td><a href="https://en.wikipedia.org/wiki/〓">〓</a></td><td>12307</td><td>Japanese typographic symbols</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>('</td><td><a href="https://en.wikipedia.org/wiki/〔">〔</a></td><td>12308</td></tr>
 <tr><td>)'</td><td><a href="https://en.wikipedia.org/wiki/〕">〕</a></td><td>12309</td></tr>
 <tr><td>(I</td><td><a href="https://en.wikipedia.org/wiki/〖">〖</a></td><td>12310</td></tr>
@@ -1191,6 +1514,10 @@ color:white!important;
 <tr><td>I5</td><td><a href="https://en.wikipedia.org/wiki/ぃ">ぃ</a></td><td>12355</td><td>I (kana)</td></tr>
 <tr><td>i5</td><td><a href="https://en.wikipedia.org/wiki/い">い</a></td><td>12356</td><td>I (kana)</td></tr>
 <tr><td>U5</td><td><a href="https://en.wikipedia.org/wiki/ぅ">ぅ</a></td><td>12357</td><td>U (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>u5</td><td><a href="https://en.wikipedia.org/wiki/う">う</a></td><td>12358</td><td>U (kana)</td></tr>
 <tr><td>E5</td><td><a href="https://en.wikipedia.org/wiki/ぇ">ぇ</a></td><td>12359</td><td>E (kana)</td></tr>
 <tr><td>e5</td><td><a href="https://en.wikipedia.org/wiki/え">え</a></td><td>12360</td><td>E (kana)</td></tr>
@@ -1201,6 +1528,10 @@ color:white!important;
 <tr><td>ki</td><td><a href="https://en.wikipedia.org/wiki/き">き</a></td><td>12365</td><td>Ki (kana)</td></tr>
 <tr><td>gi</td><td><a href="https://en.wikipedia.org/wiki/ぎ">ぎ</a></td><td>12366</td><td>Gi (kana)</td></tr>
 <tr><td>ku</td><td><a href="https://en.wikipedia.org/wiki/く">く</a></td><td>12367</td><td>Ku (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>gu</td><td><a href="https://en.wikipedia.org/wiki/ぐ">ぐ</a></td><td>12368</td><td>Ku (kana)</td></tr>
 <tr><td>ke</td><td><a href="https://en.wikipedia.org/wiki/け">け</a></td><td>12369</td><td>Ke (kana)</td></tr>
 <tr><td>ge</td><td><a href="https://en.wikipedia.org/wiki/げ">げ</a></td><td>12370</td><td>Ke (kana)</td></tr>
@@ -1211,6 +1542,10 @@ color:white!important;
 <tr><td>si</td><td><a href="https://en.wikipedia.org/wiki/し">し</a></td><td>12375</td><td>Shi (kana)</td></tr>
 <tr><td>zi</td><td><a href="https://en.wikipedia.org/wiki/じ">じ</a></td><td>12376</td><td>Shi (kana)</td></tr>
 <tr><td>su</td><td><a href="https://en.wikipedia.org/wiki/す">す</a></td><td>12377</td><td>Su (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>zu</td><td><a href="https://en.wikipedia.org/wiki/ず">ず</a></td><td>12378</td><td>Su (kana)</td></tr>
 <tr><td>se</td><td><a href="https://en.wikipedia.org/wiki/せ">せ</a></td><td>12379</td><td>Se (kana)</td></tr>
 <tr><td>ze</td><td><a href="https://en.wikipedia.org/wiki/ぜ">ぜ</a></td><td>12380</td><td>Se (kana)</td></tr>
@@ -1221,6 +1556,10 @@ color:white!important;
 <tr><td>ti</td><td><a href="https://en.wikipedia.org/wiki/ち">ち</a></td><td>12385</td><td>Chi (kana)</td></tr>
 <tr><td>di</td><td><a href="https://en.wikipedia.org/wiki/ぢ">ぢ</a></td><td>12386</td><td>Chi (kana)</td></tr>
 <tr><td>tU</td><td><a href="https://en.wikipedia.org/wiki/っ">っ</a></td><td>12387</td><td>Sokuon</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>tu</td><td><a href="https://en.wikipedia.org/wiki/つ">つ</a></td><td>12388</td><td>Tsu (kana)</td></tr>
 <tr><td>du</td><td><a href="https://en.wikipedia.org/wiki/づ">づ</a></td><td>12389</td><td>Tsu (kana)</td></tr>
 <tr><td>te</td><td><a href="https://en.wikipedia.org/wiki/て">て</a></td><td>12390</td><td>Te (kana)</td></tr>
@@ -1231,6 +1570,10 @@ color:white!important;
 <tr><td>ni</td><td><a href="https://en.wikipedia.org/wiki/に">に</a></td><td>12395</td><td>Ni (kana)</td></tr>
 <tr><td>nu</td><td><a href="https://en.wikipedia.org/wiki/ぬ">ぬ</a></td><td>12396</td><td>Nu (kana)</td></tr>
 <tr><td>ne</td><td><a href="https://en.wikipedia.org/wiki/ね">ね</a></td><td>12397</td><td>Ne (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>no</td><td><a href="https://en.wikipedia.org/wiki/の">の</a></td><td>12398</td><td>No (kana)</td></tr>
 <tr><td>ha</td><td><a href="https://en.wikipedia.org/wiki/は">は</a></td><td>12399</td><td>Ha (kana)</td></tr>
 <tr><td>ba</td><td><a href="https://en.wikipedia.org/wiki/ば">ば</a></td><td>12400</td><td>Ha (kana)</td></tr>
@@ -1241,6 +1584,10 @@ color:white!important;
 <tr><td>hu</td><td><a href="https://en.wikipedia.org/wiki/ふ">ふ</a></td><td>12405</td><td>Fu (kana)</td></tr>
 <tr><td>bu</td><td><a href="https://en.wikipedia.org/wiki/ぶ">ぶ</a></td><td>12406</td><td>Fu (kana)</td></tr>
 <tr><td>pu</td><td><a href="https://en.wikipedia.org/wiki/ぷ">ぷ</a></td><td>12407</td><td>Fu (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>he</td><td><a href="https://en.wikipedia.org/wiki/へ">へ</a></td><td>12408</td><td>He (kana)</td></tr>
 <tr><td>be</td><td><a href="https://en.wikipedia.org/wiki/べ">べ</a></td><td>12409</td><td>He (kana)</td></tr>
 <tr><td>pe</td><td><a href="https://en.wikipedia.org/wiki/ぺ">ぺ</a></td><td>12410</td><td>He (kana)</td></tr>
@@ -1251,6 +1598,10 @@ color:white!important;
 <tr><td>mi</td><td><a href="https://en.wikipedia.org/wiki/み">み</a></td><td>12415</td><td>Mi (kana)</td></tr>
 <tr><td>mu</td><td><a href="https://en.wikipedia.org/wiki/む">む</a></td><td>12416</td><td>Mu (kana)</td></tr>
 <tr><td>me</td><td><a href="https://en.wikipedia.org/wiki/め">め</a></td><td>12417</td><td>Me (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>mo</td><td><a href="https://en.wikipedia.org/wiki/も">も</a></td><td>12418</td><td>Mo (kana)</td></tr>
 <tr><td>yA</td><td><a href="https://en.wikipedia.org/wiki/ゃ">ゃ</a></td><td>12419</td><td>Yōon</td></tr>
 <tr><td>ya</td><td><a href="https://en.wikipedia.org/wiki/や">や</a></td><td>12420</td><td>Ya (kana)</td></tr>
@@ -1261,6 +1612,10 @@ color:white!important;
 <tr><td>ra</td><td><a href="https://en.wikipedia.org/wiki/ら">ら</a></td><td>12425</td><td>Ra (kana)</td></tr>
 <tr><td>ri</td><td><a href="https://en.wikipedia.org/wiki/り">り</a></td><td>12426</td><td>Ri (kana)</td></tr>
 <tr><td>ru</td><td><a href="https://en.wikipedia.org/wiki/る">る</a></td><td>12427</td><td>Ru (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>re</td><td><a href="https://en.wikipedia.org/wiki/れ">れ</a></td><td>12428</td><td>Re (kana)</td></tr>
 <tr><td>ro</td><td><a href="https://en.wikipedia.org/wiki/ろ">ろ</a></td><td>12429</td><td>Ro (kana)</td></tr>
 <tr><td>wA</td><td><a href="https://en.wikipedia.org/wiki/ゎ">ゎ</a></td><td>12430</td><td>Yōon</td></tr>
@@ -1271,6 +1626,10 @@ color:white!important;
 <tr><td>n5</td><td><a href="https://en.wikipedia.org/wiki/ん">ん</a></td><td>12435</td><td>N (kana)</td></tr>
 <tr><td>vu</td><td><a href="https://en.wikipedia.org/wiki/ゔ">ゔ</a></td><td>12436</td><td>U (kana)</td></tr>
 <tr><td>"5</td><td><a href="https://en.wikipedia.org/wiki/゛">゛</a></td><td>12443</td><td>Dakuten</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>05</td><td><a href="https://en.wikipedia.org/wiki/゜">゜</a></td><td>12444</td><td>Dakuten</td></tr>
 <tr><td>*5</td><td><a href="https://en.wikipedia.org/wiki/ゝ">ゝ</a></td><td>12445</td><td>Iteration mark</td></tr>
 <tr><td>+5</td><td><a href="https://en.wikipedia.org/wiki/ゞ">ゞ</a></td><td>12446</td><td>Iteration mark</td></tr>
@@ -1281,6 +1640,10 @@ color:white!important;
 <tr><td>u6</td><td><a href="https://en.wikipedia.org/wiki/ゥ">ゥ</a></td><td>12453</td><td>U (kana)</td></tr>
 <tr><td>U6</td><td><a href="https://en.wikipedia.org/wiki/ウ">ウ</a></td><td>12454</td><td>U (kana)</td></tr>
 <tr><td>e6</td><td><a href="https://en.wikipedia.org/wiki/ェ">ェ</a></td><td>12455</td><td>E (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>E6</td><td><a href="https://en.wikipedia.org/wiki/エ">エ</a></td><td>12456</td><td>E (kana)</td></tr>
 <tr><td>o6</td><td><a href="https://en.wikipedia.org/wiki/ォ">ォ</a></td><td>12457</td><td>O (kana)</td></tr>
 <tr><td>O6</td><td><a href="https://en.wikipedia.org/wiki/オ">オ</a></td><td>12458</td><td>O (kana)</td></tr>
@@ -1291,6 +1654,10 @@ color:white!important;
 <tr><td>Ku</td><td><a href="https://en.wikipedia.org/wiki/ク">ク</a></td><td>12463</td><td>Ku (kana)</td></tr>
 <tr><td>Gu</td><td><a href="https://en.wikipedia.org/wiki/グ">グ</a></td><td>12464</td><td>Ku (kana)</td></tr>
 <tr><td>Ke</td><td><a href="https://en.wikipedia.org/wiki/ケ">ケ</a></td><td>12465</td><td>Ke (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Ge</td><td><a href="https://en.wikipedia.org/wiki/ゲ">ゲ</a></td><td>12466</td><td>Ke (kana)</td></tr>
 <tr><td>Ko</td><td><a href="https://en.wikipedia.org/wiki/コ">コ</a></td><td>12467</td><td>Ko (kana)</td></tr>
 <tr><td>Go</td><td><a href="https://en.wikipedia.org/wiki/ゴ">ゴ</a></td><td>12468</td><td>Ko (kana)</td></tr>
@@ -1301,6 +1668,10 @@ color:white!important;
 <tr><td>Su</td><td><a href="https://en.wikipedia.org/wiki/ス">ス</a></td><td>12473</td><td>Su (kana)</td></tr>
 <tr><td>Zu</td><td><a href="https://en.wikipedia.org/wiki/ズ">ズ</a></td><td>12474</td><td>Su (kana)</td></tr>
 <tr><td>Se</td><td><a href="https://en.wikipedia.org/wiki/セ">セ</a></td><td>12475</td><td>Se (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Ze</td><td><a href="https://en.wikipedia.org/wiki/ゼ">ゼ</a></td><td>12476</td><td>Se (kana)</td></tr>
 <tr><td>So</td><td><a href="https://en.wikipedia.org/wiki/ソ">ソ</a></td><td>12477</td><td>So (kana)</td></tr>
 <tr><td>Zo</td><td><a href="https://en.wikipedia.org/wiki/ゾ">ゾ</a></td><td>12478</td><td>So (kana)</td></tr>
@@ -1311,6 +1682,10 @@ color:white!important;
 <tr><td>TU</td><td><a href="https://en.wikipedia.org/wiki/ッ">ッ</a></td><td>12483</td><td>Sokuon</td></tr>
 <tr><td>Tu</td><td><a href="https://en.wikipedia.org/wiki/ツ">ツ</a></td><td>12484</td><td>Tsu (kana)</td></tr>
 <tr><td>Du</td><td><a href="https://en.wikipedia.org/wiki/ヅ">ヅ</a></td><td>12485</td><td>Tsu (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Te</td><td><a href="https://en.wikipedia.org/wiki/テ">テ</a></td><td>12486</td><td>Te (kana)</td></tr>
 <tr><td>De</td><td><a href="https://en.wikipedia.org/wiki/デ">デ</a></td><td>12487</td><td>Te (kana)</td></tr>
 <tr><td>To</td><td><a href="https://en.wikipedia.org/wiki/ト">ト</a></td><td>12488</td><td>To (kana)</td></tr>
@@ -1321,6 +1696,10 @@ color:white!important;
 <tr><td>Ne</td><td><a href="https://en.wikipedia.org/wiki/ネ">ネ</a></td><td>12493</td><td>Ne (kana)</td></tr>
 <tr><td>No</td><td><a href="https://en.wikipedia.org/wiki/ノ">ノ</a></td><td>12494</td><td>No (kana)</td></tr>
 <tr><td>Ha</td><td><a href="https://en.wikipedia.org/wiki/ハ">ハ</a></td><td>12495</td><td>Ha (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Ba</td><td><a href="https://en.wikipedia.org/wiki/バ">バ</a></td><td>12496</td><td>Ha (kana)</td></tr>
 <tr><td>Pa</td><td><a href="https://en.wikipedia.org/wiki/パ">パ</a></td><td>12497</td><td>Ha (kana)</td></tr>
 <tr><td>Hi</td><td><a href="https://en.wikipedia.org/wiki/ヒ">ヒ</a></td><td>12498</td><td>Hi (kana)</td></tr>
@@ -1331,6 +1710,10 @@ color:white!important;
 <tr><td>Pu</td><td><a href="https://en.wikipedia.org/wiki/プ">プ</a></td><td>12503</td><td>Fu (kana)</td></tr>
 <tr><td>He</td><td><a href="https://en.wikipedia.org/wiki/ヘ">ヘ</a></td><td>12504</td><td>He (kana)</td></tr>
 <tr><td>Be</td><td><a href="https://en.wikipedia.org/wiki/ベ">ベ</a></td><td>12505</td><td>He (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Pe</td><td><a href="https://en.wikipedia.org/wiki/ペ">ペ</a></td><td>12506</td><td>He (kana)</td></tr>
 <tr><td>Ho</td><td><a href="https://en.wikipedia.org/wiki/ホ">ホ</a></td><td>12507</td><td>Ho (kana)</td></tr>
 <tr><td>Bo</td><td><a href="https://en.wikipedia.org/wiki/ボ">ボ</a></td><td>12508</td><td>Ho (kana)</td></tr>
@@ -1341,6 +1724,10 @@ color:white!important;
 <tr><td>Me</td><td><a href="https://en.wikipedia.org/wiki/メ">メ</a></td><td>12513</td><td>Me (kana)</td></tr>
 <tr><td>Mo</td><td><a href="https://en.wikipedia.org/wiki/モ">モ</a></td><td>12514</td><td>Mo (kana)</td></tr>
 <tr><td>YA</td><td><a href="https://en.wikipedia.org/wiki/ャ">ャ</a></td><td>12515</td><td>Yōon</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Ya</td><td><a href="https://en.wikipedia.org/wiki/ヤ">ヤ</a></td><td>12516</td><td>Ya (kana)</td></tr>
 <tr><td>YU</td><td><a href="https://en.wikipedia.org/wiki/ュ">ュ</a></td><td>12517</td><td>Yōon</td></tr>
 <tr><td>Yu</td><td><a href="https://en.wikipedia.org/wiki/ユ">ユ</a></td><td>12518</td><td>Yu (kana)</td></tr>
@@ -1351,6 +1738,10 @@ color:white!important;
 <tr><td>Ru</td><td><a href="https://en.wikipedia.org/wiki/ル">ル</a></td><td>12523</td><td>Ru (kana)</td></tr>
 <tr><td>Re</td><td><a href="https://en.wikipedia.org/wiki/レ">レ</a></td><td>12524</td><td>Re (kana)</td></tr>
 <tr><td>Ro</td><td><a href="https://en.wikipedia.org/wiki/ロ">ロ</a></td><td>12525</td><td>Ro (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>WA</td><td><a href="https://en.wikipedia.org/wiki/ヮ">ヮ</a></td><td>12526</td><td>Wa (kana)</td></tr>
 <tr><td>Wa</td><td><a href="https://en.wikipedia.org/wiki/ワ">ワ</a></td><td>12527</td><td>Wa (kana)</td></tr>
 <tr><td>Wi</td><td><a href="https://en.wikipedia.org/wiki/ヰ">ヰ</a></td><td>12528</td><td>Wi (kana)</td></tr>
@@ -1361,6 +1752,10 @@ color:white!important;
 <tr><td>KA</td><td><a href="https://en.wikipedia.org/wiki/ヵ">ヵ</a></td><td>12533</td></tr>
 <tr><td>KE</td><td><a href="https://en.wikipedia.org/wiki/ヶ">ヶ</a></td><td>12534</td><td>Small ke</td></tr>
 <tr><td>Va</td><td><a href="https://en.wikipedia.org/wiki/ヷ">ヷ</a></td><td>12535</td><td>Wa (kana)</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>Vi</td><td><a href="https://en.wikipedia.org/wiki/ヸ">ヸ</a></td><td>12536</td><td>Wi (kana)</td></tr>
 <tr><td>Ve</td><td><a href="https://en.wikipedia.org/wiki/ヹ">ヹ</a></td><td>12537</td><td>We (kana)</td></tr>
 <tr><td>Vo</td><td><a href="https://en.wikipedia.org/wiki/ヺ">ヺ</a></td><td>12538</td><td>Wo (kana)</td></tr>
@@ -1371,6 +1766,10 @@ color:white!important;
 <tr><td>b4</td><td><a href="https://en.wikipedia.org/wiki/ㄅ">ㄅ</a></td><td>12549</td><td>Bopomofo</td></tr>
 <tr><td>p4</td><td><a href="https://en.wikipedia.org/wiki/ㄆ">ㄆ</a></td><td>12550</td><td>Bopomofo</td></tr>
 <tr><td>m4</td><td><a href="https://en.wikipedia.org/wiki/ㄇ">ㄇ</a></td><td>12551</td><td>Bopomofo</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>f4</td><td><a href="https://en.wikipedia.org/wiki/ㄈ">ㄈ</a></td><td>12552</td><td>Bopomofo</td></tr>
 <tr><td>d4</td><td><a href="https://en.wikipedia.org/wiki/ㄉ">ㄉ</a></td><td>12553</td><td>Bopomofo</td></tr>
 <tr><td>t4</td><td><a href="https://en.wikipedia.org/wiki/ㄊ">ㄊ</a></td><td>12554</td><td>Bopomofo</td></tr>
@@ -1381,6 +1780,10 @@ color:white!important;
 <tr><td>h4</td><td><a href="https://en.wikipedia.org/wiki/ㄏ">ㄏ</a></td><td>12559</td><td>Bopomofo</td></tr>
 <tr><td>j4</td><td><a href="https://en.wikipedia.org/wiki/ㄐ">ㄐ</a></td><td>12560</td><td>Bopomofo</td></tr>
 <tr><td>q4</td><td><a href="https://en.wikipedia.org/wiki/ㄑ">ㄑ</a></td><td>12561</td><td>Bopomofo</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>x4</td><td><a href="https://en.wikipedia.org/wiki/ㄒ">ㄒ</a></td><td>12562</td><td>Bopomofo</td></tr>
 <tr><td>zh</td><td><a href="https://en.wikipedia.org/wiki/ㄓ">ㄓ</a></td><td>12563</td><td>Bopomofo</td></tr>
 <tr><td>ch</td><td><a href="https://en.wikipedia.org/wiki/ㄔ">ㄔ</a></td><td>12564</td><td>Bopomofo</td></tr>
@@ -1391,6 +1794,10 @@ color:white!important;
 <tr><td>s4</td><td><a href="https://en.wikipedia.org/wiki/ㄙ">ㄙ</a></td><td>12569</td><td>Bopomofo</td></tr>
 <tr><td>a4</td><td><a href="https://en.wikipedia.org/wiki/ㄚ">ㄚ</a></td><td>12570</td><td>Bopomofo</td></tr>
 <tr><td>o4</td><td><a href="https://en.wikipedia.org/wiki/ㄛ">ㄛ</a></td><td>12571</td><td>Bopomofo</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>e4</td><td><a href="https://en.wikipedia.org/wiki/ㄜ">ㄜ</a></td><td>12572</td><td>Bopomofo</td></tr>
 <tr><td>ai</td><td><a href="https://en.wikipedia.org/wiki/ㄞ">ㄞ</a></td><td>12574</td><td>Bopomofo</td></tr>
 <tr><td>ei</td><td><a href="https://en.wikipedia.org/wiki/ㄟ">ㄟ</a></td><td>12575</td><td>Bopomofo</td></tr>
@@ -1401,6 +1808,10 @@ color:white!important;
 <tr><td>aN</td><td><a href="https://en.wikipedia.org/wiki/ㄤ">ㄤ</a></td><td>12580</td><td>Bopomofo</td></tr>
 <tr><td>eN</td><td><a href="https://en.wikipedia.org/wiki/ㄥ">ㄥ</a></td><td>12581</td><td>Bopomofo</td></tr>
 <tr><td>er</td><td><a href="https://en.wikipedia.org/wiki/ㄦ">ㄦ</a></td><td>12582</td><td>Bopomofo</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>i4</td><td><a href="https://en.wikipedia.org/wiki/ㄧ">ㄧ</a></td><td>12583</td><td>Bopomofo</td></tr>
 <tr><td>u4</td><td><a href="https://en.wikipedia.org/wiki/ㄨ">ㄨ</a></td><td>12584</td><td>Bopomofo</td></tr>
 <tr><td>iu</td><td><a href="https://en.wikipedia.org/wiki/ㄩ">ㄩ</a></td><td>12585</td><td>Bopomofo</td></tr>
@@ -1411,6 +1822,10 @@ color:white!important;
 <tr><td>2c</td><td><a href="https://en.wikipedia.org/wiki/㈡">㈡</a></td><td>12833</td></tr>
 <tr><td>3c</td><td><a href="https://en.wikipedia.org/wiki/㈢">㈢</a></td><td>12834</td></tr>
 <tr><td>4c</td><td><a href="https://en.wikipedia.org/wiki/㈣">㈣</a></td><td>12835</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>5c</td><td><a href="https://en.wikipedia.org/wiki/㈤">㈤</a></td><td>12836</td></tr>
 <tr><td>6c</td><td><a href="https://en.wikipedia.org/wiki/㈥">㈥</a></td><td>12837</td></tr>
 <tr><td>7c</td><td><a href="https://en.wikipedia.org/wiki/㈦">㈦</a></td><td>12838</td></tr>
@@ -1421,6 +1836,10 @@ color:white!important;
 <tr><td>fl</td><td><a href="https://en.wikipedia.org/wiki/ﬂ">ﬂ</a></td><td>64258</td><td>Typographic ligature</td></tr>
 <tr><td>ft</td><td><a href="https://en.wikipedia.org/wiki/ﬅ">ﬅ</a></td><td>64261</td><td>Typographic ligature</td></tr>
 <tr><td>st</td><td><a href="https://en.wikipedia.org/wiki/ﬆ">ﬆ</a></td><td>64262</td><td>Typographic ligature</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>~!</td><td><a href="https://en.wikipedia.org/wiki/¡">¡</a></td><td>161</td><td>Inverted question and exclamation marks</td></tr>
 <tr><td>c|</td><td><a href="https://en.wikipedia.org/wiki/¢">¢</a></td><td>162</td><td>Cent (currency)</td></tr>
 <tr><td>$$</td><td><a href="https://en.wikipedia.org/wiki/£">£</a></td><td>163</td><td>Pound sign</td></tr>
@@ -1431,6 +1850,10 @@ color:white!important;
 <tr><td>-,</td><td><a href="https://en.wikipedia.org/wiki/¬">¬</a></td><td>172</td><td>Negation</td></tr>
 <tr><td>-=</td><td><a href="https://en.wikipedia.org/wiki/¯">¯</a></td><td>175</td><td>Macron</td></tr>
 <tr><td>~o</td><td><a href="https://en.wikipedia.org/wiki/°">°</a></td><td>176</td><td>Degree symbol</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>22</td><td><a href="https://en.wikipedia.org/wiki/²">²</a></td><td>178</td><td>Square (algebra)</td></tr>
 <tr><td>33</td><td><a href="https://en.wikipedia.org/wiki/³">³</a></td><td>179</td><td>Cube (algebra)</td></tr>
 <tr><td>pp</td><td><a href="https://en.wikipedia.org/wiki/¶">¶</a></td><td>182</td><td>Pilcrow</td></tr>
@@ -1441,6 +1864,10 @@ color:white!important;
 <tr><td>A^</td><td><a href="https://en.wikipedia.org/wiki/Â">Â</a></td><td>194</td><td>Â</td></tr>
 <tr><td>A~</td><td><a href="https://en.wikipedia.org/wiki/Ã">Ã</a></td><td>195</td><td>Ã</td></tr>
 <tr><td>A"</td><td><a href="https://en.wikipedia.org/wiki/Ä">Ä</a></td><td>196</td><td>Ä</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>A@</td><td><a href="https://en.wikipedia.org/wiki/Å">Å</a></td><td>197</td><td>Å</td></tr>
 <tr><td>E`</td><td><a href="https://en.wikipedia.org/wiki/È">È</a></td><td>200</td><td>È</td></tr>
 <tr><td>E^</td><td><a href="https://en.wikipedia.org/wiki/Ê">Ê</a></td><td>202</td><td>Ê</td></tr>
@@ -1451,6 +1878,10 @@ color:white!important;
 <tr><td>N~</td><td><a href="https://en.wikipedia.org/wiki/Ñ">Ñ</a></td><td>209</td><td>Ñ</td></tr>
 <tr><td>O`</td><td><a href="https://en.wikipedia.org/wiki/Ò">Ò</a></td><td>210</td><td>Ò</td></tr>
 <tr><td>O^</td><td><a href="https://en.wikipedia.org/wiki/Ô">Ô</a></td><td>212</td><td>Circumflex</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>O~</td><td><a href="https://en.wikipedia.org/wiki/Õ">Õ</a></td><td>213</td><td>Õ</td></tr>
 <tr><td>/\</td><td><a href="https://en.wikipedia.org/wiki/×">×</a></td><td>215</td><td>Multiplication sign</td></tr>
 <tr><td>U`</td><td><a href="https://en.wikipedia.org/wiki/Ù">Ù</a></td><td>217</td><td>Grave accent</td></tr>
@@ -1461,6 +1892,10 @@ color:white!important;
 <tr><td>a~</td><td><a href="https://en.wikipedia.org/wiki/ã">ã</a></td><td>227</td><td>Ã</td></tr>
 <tr><td>a"</td><td><a href="https://en.wikipedia.org/wiki/ä">ä</a></td><td>228</td><td>Ä</td></tr>
 <tr><td>a@</td><td><a href="https://en.wikipedia.org/wiki/å">å</a></td><td>229</td><td>Å</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>e`</td><td><a href="https://en.wikipedia.org/wiki/è">è</a></td><td>232</td><td>È</td></tr>
 <tr><td>e^</td><td><a href="https://en.wikipedia.org/wiki/ê">ê</a></td><td>234</td><td>Ê</td></tr>
 <tr><td>e"</td><td><a href="https://en.wikipedia.org/wiki/ë">ë</a></td><td>235</td><td>Ë</td></tr>
@@ -1471,6 +1906,10 @@ color:white!important;
 <tr><td>o^</td><td><a href="https://en.wikipedia.org/wiki/ô">ô</a></td><td>244</td><td>Circumflex</td></tr>
 <tr><td>o~</td><td><a href="https://en.wikipedia.org/wiki/õ">õ</a></td><td>245</td><td>Õ</td></tr>
 <tr><td>u`</td><td><a href="https://en.wikipedia.org/wiki/ù">ù</a></td><td>249</td><td>Grave accent</td></tr>
+</tbody>
+</table>
+<table class="dgref">
+<tbody>
 <tr><td>u^</td><td><a href="https://en.wikipedia.org/wiki/û">û</a></td><td>251</td><td>Û</td></tr>
 <tr><td>y"</td><td><a href="https://en.wikipedia.org/wiki/ÿ">ÿ</a></td><td>255</td><td>Diaeresis (diacritic)</td></tr>
 </tbody>

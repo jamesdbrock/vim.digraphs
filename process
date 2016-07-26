@@ -1,5 +1,5 @@
 #! /usr/bin/env stack
--- stack --resolver nightly-2016-06-21 --verbosity warn runghc --package parsec
+-- stack --resolver nightly-2016-06-21 --verbosity warn runghc --package parsec --package wreq --package text --package tagsoup
 -- vim: set filetype=haskell :
 
 -- Usage:
@@ -17,28 +17,104 @@
 --
 -- $ pandoc -t html5 -s --self-contained --css=../stylesheet-forreaders/stylesheet-forreaders.css < README.md > README.html
 
+{-# LANGUAGE ScopedTypeVariables #-}
+
+import Control.Monad
+import Data.Maybe
 import Text.Parsec
 import Data.Char
 import Data.Monoid
 import Control.Applicative hiding ((<|>))
+import Network.Wreq
+import Control.Lens
+import qualified Data.Text.Lazy as Text
+import qualified Data.Text.Lazy.Encoding as Text.Encoding
+--- import qualified Text.HTML.TagSoup as TagSoup
+import Text.HTML.TagSoup
+--- import System.IO.Error
+import Control.Exception
 
 main :: IO ()
-main = interact f
+main = do
+    (Right xs) <- parse p "" <$> getContents
+    --- putStr =<< (fmap unlines $ fmap show <$> mapM annotate xs)
+    --
+    --- forM_ xs $ \x -> do
+    ---     y <- Control.Exception.try $ annotate x
+    ---     case y of
+    ---         Left (excep :: SomeException) -> putStrLn $ show x
+    ---         Right row -> putStrLn $ toHtmlRow row
+
+    forM_ xs $ \(kybd, uncd, uncdn) -> do
+        putStr $ "<tr><td>" ++ kybd ++ "</td><td><a href=\"https://en.wikipedia.org/wiki/" ++ uncd ++ "\">" ++ uncd ++ "</a></td><td>" ++ show uncdn ++ "</td>"
+        wikiTitl <- Control.Exception.try $ getWikipedia uncd
+        case wikiTitl of
+            Left (excep :: SomeException) -> return ()
+            Right (Just titl) -> putStr $ "<td>" ++ titl ++ "</td>"
+            _ -> return ()
+        putStrLn "</tr>"
+
+
+toHtmlRow :: (String, String, Int, Maybe String) -> String
+toHtmlRow (kybd, uncd, uncdn, Just titl) =
+    "<tr><td>" ++ kybd ++ "</td><td>" ++ uncd ++ "</td><td>" ++ show uncdn ++ "</td><td>" ++ titl ++ "</td></tr>"
+toHtmlRow (kybd, uncd, uncdn, Nothing) =
+    "<tr><td>" ++ kybd ++ "</td><td>" ++ uncd ++ "</td><td>" ++ show uncdn ++ "</td></tr>"
+
+annotate (kybd, uncd, uncdn) = do
+    getWikipedia uncd >>= \titl -> return (kybd, uncd, uncdn, titl)
+
+--- main :: IO ()
+--- main = interact f
 
 f :: String -> String
 f x = either show id $ do
     y <- parse p "" x
-    Right $ unlines $
-        [ "| Digraph ^K- | Char | Unicode point |"
-        , "| ----------- | ---- | ------------- |"
-        ]
-        <>
-        fmap mkLine y
-        <>
-        [
-        ]
+    Right $ toHtml y
 
-mkLine (kybd, uncd, uncdn) = "| " ++ kybd ++ " | " ++ uncd ++ " | " ++ show uncdn ++ " |"
+toMarkdown :: [(String, String, Int)] -> String
+toMarkdown xs = unlines $
+    [ "| Digraph ^K- | Glyph | Unicode |"
+    , "| ----------- | ---- | ------------- |"
+    ]
+    <>
+    fmap mkLine xs
+    <>
+    [
+    ]
+  where
+    mkLine (kybd, uncd, uncdn) = "| " ++ kybd ++ " | " ++ uncd ++ " | " ++ show uncdn ++ " |"
+
+
+--- <h1 id="firstHeading" class="firstHeading" lang="en">Degree symbol</h1>
+getWikipedia :: String -> IO (Maybe String)
+getWikipedia x = do
+    r <- Network.Wreq.get $ "https://en.wikipedia.org/wiki/" ++ x
+    let b = Text.unpack $ Text.Encoding.decodeUtf8 $ r ^. responseBody
+    --- return $ unlines $ fmap show tags
+    --- return $ unlines $ fmap show $ take 2 $ dropWhile (~/= ("<h1 id=firstHeading>"::String)) tags
+    return $ join $ fmap maybeTagText $ listToMaybe $ drop 1 $ dropWhile (~/= ("<h1 id=firstHeading>"::String)) $ parseTags b
+    --- fmap (either (const Nothing) Just ) $ try $ return $ join $ fmap maybeTagText $ listToMaybe $ drop 1 $ dropWhile (~/= ("<h1 id=firstHeading>"::String)) $ parseTags b
+
+toHtml :: [(String, String, Int)] -> String
+toHtml xs = unlines $
+    [ "<html>"
+    , "<head>"
+    , "<meta charset=\"utf-8\"/>"
+    , "<link rel=\"stylesheet\" href=\"https://raw.githubusercontent.com/jamesdbrock/stylesheet-forreaders/master/stylesheet-forreaders.css\"/>"
+    , "</head>"
+    , "<body>"
+    , "<table>"
+    ]
+    <>
+    fmap mkLine xs
+    <>
+    [ "</table>"
+    , "</body>"
+    , "</html>"
+    ]
+  where
+    mkLine (kybd, uncd, uncdn) = "<tr><td>" ++ kybd ++ "</td><td>" ++ uncd ++ "</td><td>" ++ show uncdn ++ "</td></tr>"
 
 psDigraph :: Parsec String () (String, String, Int)
 psDigraph = do
